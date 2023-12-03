@@ -51,7 +51,7 @@
 &kp ESCAPE  &kp Q  &kp W       &kp F       &kp P       &kp B        &kp J    &kp L       &kp U       &kp Y    &kp SQT   &kp BSPC
 &kp TAB     &kp A  &hm LALT R  &hm LGUI S  &kp T       &kp G        &kp M    &hm RGUI N  &hm RALT E  &kp I    &kp O     &kp ENTER
 &kp LSHFT   &kp Z  &kp X       &kp C       &kp D       &kp V        &kp K    &kp H       &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                               &sl 0       &sk LSHIFT  &kp SPACE    &kp RET  &kp DEL     &sl 1
+                               &to DEFAULT       &sk LSHIFT  &kp SPACE    &kp RET  &kp DEL     &to CODING
             >;
         };
 
@@ -60,7 +60,7 @@
 &kp ESC               &kp EXCLAMATION       &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &trans                &trans                &trans       &kp FSLH  &kp LEFT_BRACE  &kp LBKT                &kp RBKT               &kp RIGHT_BRACE  &kp ESC       &kp BSLH              &trans                 &trans
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans       &trans    &trans          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp ESC          &trans        &trans                &trans                 &trans
-                                                         &sl 0     &sk LSHIFT      &kp SPACE               &kp RET                &kp ESC          &sl 2
+                                                         &to DEFAULT     &sk LSHIFT      &kp SPACE               &kp RET                &kp ESC          &to NUMBERS
             >;
         };
 
@@ -69,7 +69,7 @@
 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4      &kp N5       &kp N6        &kp N7   &kp N8  &kp N9  &kp N0     &kp BACKSPACE
 &trans   &trans  &trans  &trans  &trans      &trans       &kp ASTERISK  &kp N4   &kp N5  &kp N6  &kp PLUS   &kp RET
 &trans   &trans  &trans  &trans  &trans      &trans       &kp FSLH      &kp N1   &kp N2  &kp N3  &kp MINUS  &trans
-                         &sl 0   &sk LSHIFT  &kp SPACE    &kp RET       &kp DOT  &sl 3
+                         &to DEFAULT   &sk LSHIFT  &kp SPACE    &kp RET       &kp DOT  &to NAVIGATION
             >;
         };
 
@@ -78,7 +78,7 @@
 &kp F1  &kp F2            &kp F3            &kp F4          &kp F5             &kp F6       &kp F7          &kp F8          &kp F9        &kp F10          &kp F11  &kp F12
 &trans  &trans            &trans            &trans          &trans             &trans       &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans   &trans
 &trans  &trans            &trans            &trans          &trans             &trans       &trans          &trans          &trans        &trans           &trans   &trans
-                                            &sl 0           &sk LSHIFT         &kp SPACE    &kp RET         &trans          &sl 4
+                                            &to DEFAULT           &sk LSHIFT         &kp SPACE    &kp RET         &trans          &to MEDIA
             >;
         };
 
@@ -87,7 +87,7 @@
 &trans      &trans        &trans        &trans        &trans      &trans       &trans            &trans          &trans      &kp C_VOLUME_UP    &trans  &trans
 &trans      &trans        &trans        &trans        &trans      &trans       &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &kp C_VOLUME_DOWN  &trans  &trans
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans      &trans       &trans            &trans          &trans      &kp K_MUTE         &trans  &trans
-                                        &sl 0         &sk LSHIFT  &kp SPACE    &kp RET           &trans          &sl 5
+                                        &to DEFAULT         &sk LSHIFT  &kp SPACE    &kp RET           &trans          &to QUERTY
             >;
         };
 
@@ -96,7 +96,7 @@
 &kp ESC    &kp Q  &kp W  &kp E  &kp R       &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P     &kp BACKSPACE
 &kp TAB    &kp A  &kp S  &kp D  &kp F       &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C  &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &sl 0  &sk LSHIFT  &kp SPACE    &kp RET  &kp DEL  &trans
+                         &to DEFAULT  &sk LSHIFT  &kp SPACE    &kp RET  &kp DEL  &trans
             >;
         };
     };
