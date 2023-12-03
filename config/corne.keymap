@@ -47,46 +47,46 @@
 
         base {
             bindings = <
-&kp ESCAPE  &kp Q  &kp W       &kp F       &kp P     &kp B        &kp J      &kp L       &kp U       &kp Y    &kp SQT   &kp BSPC
-&kp TAB     &kp A  &kp R       &kp S       &kp T     &kp G        &kp M      &kp N       &kp E       &kp I    &kp O     &kp ENTER
-&kp LSHFT   &kp Z  &kp X       &kp C       &kp D     &kp V        &kp K      &kp H       &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-                               &to BASE    &kp LCMD  &hm LEFT_ALT SPACE    &hm RIGHT_ALT SPACE  &kp DEL     &to CODING
+              &kp ESCAPE    &kp Q    &kp W    &kp F       &kp P               &kp B     &kp J    &kp L                &kp U      &kp Y    &kp SQT   &kp BSPC
+              &kp TAB       &kp A    &kp R    &kp S       &kp T               &kp G     &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
+              &kp LSHFT     &kp Z    &kp X    &kp C       &kp D               &kp V     &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                              &to BASE    &hm LEFT_ALT SPACE  &kp LCMD  &kp DEL  &hm RIGHT_ALT SPACE  &to CODING
             >;
         };
 
         coding {
             bindings = <
-&kp ESC               &kp EXCLAMATION       &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans                &trans                &trans       &kp FSLH  &kp LEFT_BRACE  &kp LBKT                &kp RBKT               &kp RIGHT_BRACE  &none         &kp BSLH              &kp UP_ARROW           &trans
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans       &trans    &trans          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none            &trans        &kp LEFT_ARROW        &kp DOWN_ARROW         &kp RIGHT
-                                                         &to BASE     &sk LSHIFT      &kp SPACE               &kp RET                &kp ESC          &to MEDIA
+              &kp ESC    &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+              &none      &none              &none       &kp FSLH  &kp LEFT_BRACE  &kp LBKT                &kp RBKT               &kp RIGHT_BRACE  &none         &kp BSLH              &kp UP_ARROW           &none
+              &kp C_BRIGHTNESS_DEC          &kp C_BRIGHTNESS_INC  &none       &none    &none          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none            &none        &kp LEFT_ARROW        &kp DOWN_ARROW         &kp RIGHT
+                                             &to BASE     &sk LSHIFT      &kp SPACE               &kp RET                &kp ESC          &to MEDIA
             >;
         };
 
         media {
             bindings = <
 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5      &kp F6       &kp F7            &kp F8          &kp F10     &kp F11  &kp F12  &kp C_VOL_UP
-&trans      &trans        &trans        &trans        &trans      &trans       &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &none    &trans   &kp C_VOLUME_DOWN
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans      &trans       &trans            &trans          &trans      &none    &trans   &kp K_MUTE
-                                        &to BASE         &sk LSHIFT  &kp SPACE    &kp RET           &trans          &to NUMBERS
+&none      &none        &none        &none        &none      &none       &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &none    &none   &kp C_VOLUME_DOWN
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none      &none       &none            &none          &none      &none    &none   &kp K_MUTE
+                                        &to BASE         &sk LSHIFT  &kp SPACE    &kp RET           &none          &to NUMBERS
             >;
         };
 
         numbers {
             bindings = <
 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4      &kp N5       &kp N6        &kp N7   &kp N8  &kp N9  &kp N0     &kp BACKSPACE
-&trans   &trans  &trans  &trans  &trans      &trans       &kp ASTERISK  &kp N4   &kp N5  &kp N6  &kp PLUS   &kp RET
-&trans   &trans  &trans  &trans  &trans      &trans       &kp FSLH      &kp N1   &kp N2  &kp N3  &kp MINUS  &trans
-                         &to BASE   &sk LSHIFT  &kp SPACE    &kp RET       &kp DOT  &to QWERTY
+&none   &none  &none  &none  &none      &none       &kp ASTERISK  &kp N4   &kp N5  &kp N6  &kp PLUS   &kp RET
+&none   &none  &none  &none  &none      &none       &kp FSLH      &kp N1   &kp N2  &kp N3  &kp MINUS  &none
+                         &to BASE   &sk LSHIFT  &kp SPACE    &kp RET    &kp DOT  &to QWERTY
             >;
         };
 
         qwerty {
             bindings = <
-&kp ESC    &kp Q  &kp W  &kp E  &kp R       &kp T        &kp Y    &kp U    &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp TAB    &kp A  &kp S  &kp D  &kp F       &kp G        &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z  &kp X  &kp C  &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &to BASE  &kp LCMD  &hm LEFT_ALT SPACE    &hm RIGHT_ALT SPACE  &kp DEL  &to BASE
+&kp ESC    &kp Q  &kp W  &kp E      &kp R       &kp T        &kp Y    &kp U    &kp I      &kp O     &kp P     &kp BACKSPACE
+&kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                         &to BASE   &hm LEFT_ALT SPACE   &kp LCMD      &kp DEL &hm RIGHT_ALT SPACE  &none
             >;
         };
     };
