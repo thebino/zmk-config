@@ -87,7 +87,7 @@
 
         base {
             bindings = <
-                &kp Esc       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &hm N10 SQT   &kp BSPC
+                &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &hm N10 SQT   &kp BSPC
                 &kp TAB       &kp A   &kp R   &kp S       &kp T       &kp G    &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
                 &kp LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
                                               &to BASE    &hm LEFT_ALT SPACE  &kp LCMD  &kp DEL  &hm RIGHT_ALT SPACE  &to CODING
@@ -96,7 +96,7 @@
 
         coding {
             bindings = <
-                &kp Esc               &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
+                &kp ESC               &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
                 &none                 &none              &none        &kp FSLH  &kp LEFT_BRACE  &kp LBKT                &kp RBKT               &kp RIGHT_BRACE  &none         &kp BSLH              &kp UP_ARROW           &kp ENTER
                 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none    &none          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none            &none        &kp LEFT_ARROW        &kp DOWN_ARROW         &kp RIGHT
                                               &to BASE     &hm LEFT_ALT SPACE          &kp LCMD               &kp DEL                &hm RIGHT_ALT SPACE          &to MEDIA
