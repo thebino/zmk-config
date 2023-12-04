@@ -6,11 +6,22 @@
 #define BASE 0
 #define CODING 1
 #define MEDIA 2
-#define NUMBERS 3
-#define COLEMAK 4
+#define COLEMAK 3
 
 / {
     behaviors {
+        // enables a layer while key is pressed and disables on release => enables layer when tabbed
+        htl: hold_tab_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAB_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&to>;
+        };
+
+        // triggers key press on first item when held => second item when tabbed
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -21,6 +32,8 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // different key press on each press (shift -> Caps Lock)
+        // https://zmk.dev/docs/behaviors/tap-dance
         td: tapdance {
             compatible = "zmk,behavior-hold-tap";
             label = "TAPDANCE";
@@ -89,16 +102,18 @@
             bindings = <
                 &kp ESC    &hm N1 Q  &hm N2 W  &hm N3 E      &hm N4 R       &hm N5 T        &hm N6 Y    &hm N7 U    &hm N8 I      &hm N9 O     &hm N0 P     &kp BSPC
                 &kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
-                &kp LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                                         &to BASE   &lt CODING SPACE   &kp LCMD      &kp DEL &hm RIGHT_ALT SPACE  &to CODING
+                &td CAPS LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &td FSLH BSLH  &td CAPS RSHFT
+                                         &to BASE   &lt CODING SPACE   &kp LCMD      &kp DEL &hm RIGHT_ALT SPACE  &htl CODING CODING
+
+                 // LC(LG(LS(N4)))  ->
             >;
         };
 
         coding {
             bindings = <
-                &kp ESC               &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-                &none                 &none              &none        &kp FSLH  &kp LEFT_BRACE  &kp LBKT                &kp RBKT               &kp RIGHT_BRACE  &none         &kp BSLH              &kp UP_ARROW           &kp ENTER
-                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none    &none          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &none            &none        &kp LEFT_ARROW        &kp DOWN_ARROW         &kp RIGHT
+                &kp ESC               &kp EXCLAMATION    &kp AT_SIGN  &kp HASH  &kp DOLLAR      &kp PERCENT             &kp CARET              &kp AMPERSAND    &kp ASTERISK  &none  &none  &none
+                &none                 &none              &none        &none  &none  &none                &none               &none  &none         &none              &td UP_ARROW PG_UP     &none
+                &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none       &none    &none          &none    &none  &none            &none        &kp LEFT_ARROW        &td DOWN_ARROW PG_DN    &kp RIGHT
                                               &to BASE     &lt CODING SPACE          &kp LCMD               &kp DEL                &hm RIGHT_ALT SPACE          &to MEDIA
             >;
         };
@@ -108,16 +123,7 @@
                 &kp F1      &kp F2        &kp F3        &kp F4        &kp F5      &kp F6       &kp F7            &kp F8          &kp F10     &kp F11  &kp F12  &kp C_VOL_UP
                 &none      &none        &none        &none        &none      &none       &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &none    &none   &kp C_VOLUME_DOWN
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR         &none            &none          &none      &none    &none   &kp K_MUTE
-                                                        &to BASE         &lt CODING SPACE  &kp LCMD    &kp DEL           &hm RIGHT_ALT SPACE          &to NUMBERS
-            >;
-        };
-
-        numbers {
-            bindings = <
-                &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4      &kp N5       &kp N6        &kp N7   &kp N8  &kp N9  &kp N0     &kp BSPC
-                &none   &none  &none  &none  &none      &none       &kp ASTERISK  &kp N4   &kp N5  &kp N6  &kp PLUS   &kp RET
-                &none   &none  &none  &none  &none      &none       &kp FSLH      &kp N1   &kp N2  &kp N3  &kp MINUS  &none
-                                      &to BASE   &lt CODING SPACE  &kp LCMD    &kp DEL    &hm RIGHT_ALT SPACE  &to COLEMAK
+                                                        &to BASE         &lt CODING SPACE  &kp LCMD    &kp DEL           &hm RIGHT_ALT SPACE          &to COLEMAK
             >;
         };
 
