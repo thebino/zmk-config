@@ -7,7 +7,7 @@
 #define CODING 1
 #define MEDIA 2
 #define NUMBERS 3
-#define QWERTY 4
+#define COLEMAK 4
 
 / {
     behaviors {
@@ -87,10 +87,10 @@
 
         base {
             bindings = <
-                &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &kp SQT   &kp BSPC
-                &kp TAB       &kp A   &kp R   &kp S       &kp T       &kp G    &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
-                &kp LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                                              &to BASE    &hm LEFT_ALT SPACE  &kp LCMD  &kp DEL  &hm RIGHT_ALT SPACE  &to CODING
+                &kp ESC    &kp Q  &kp W  &kp E      &kp R       &kp T        &kp Y    &kp U    &kp I      &kp O     &kp P     &kp BSPC
+                &kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
+                &kp LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                                         &to BASE   &hm LEFT_ALT SPACE   &kp LCMD      &kp DEL &hm RIGHT_ALT SPACE  &none
             >;
         };
 
@@ -117,16 +117,16 @@
                 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4      &kp N5       &kp N6        &kp N7   &kp N8  &kp N9  &kp N0     &kp BSPC
                 &none   &none  &none  &none  &none      &none       &kp ASTERISK  &kp N4   &kp N5  &kp N6  &kp PLUS   &kp RET
                 &none   &none  &none  &none  &none      &none       &kp FSLH      &kp N1   &kp N2  &kp N3  &kp MINUS  &none
-                                      &to BASE   &hm LEFT_ALT SPACE  &kp LCMD    &kp DEL    &hm RIGHT_ALT SPACE  &to QWERTY
+                                      &to BASE   &hm LEFT_ALT SPACE  &kp LCMD    &kp DEL    &hm RIGHT_ALT SPACE  &to COLEMAK
             >;
         };
 
-        qwerty {
+        colemak {
             bindings = <
-                &kp ESC    &kp Q  &kp W  &kp E      &kp R       &kp T        &kp Y    &kp U    &kp I      &kp O     &kp P     &kp BSPC
-                &kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
-                &kp LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                                         &to BASE   &hm LEFT_ALT SPACE   &kp LCMD      &kp DEL &hm RIGHT_ALT SPACE  &none
+                &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &kp SQT   &kp BSPC
+                &kp TAB       &kp A   &kp R   &kp S       &kp T       &kp G    &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
+                &kp LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                                              &to BASE    &hm LEFT_ALT SPACE  &kp LCMD  &kp DEL  &hm RIGHT_ALT SPACE  &to CODING
             >;
         };
     };
