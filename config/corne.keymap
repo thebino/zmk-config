@@ -115,7 +115,7 @@
             bindings = <
                 &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &hm N0 GRAVE   &td LA(BSPC) BSPC
                 &kp TAB       &kp A   &kp R   &kp S       &kp T       &kp G    &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
-                &td CAPS LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &td CAPS RSHFT
+                &td CAPS LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
                                               &htl MEDIA BASE    &kp LCMD  &kp SPACE  &kp SPACE  &hm RIGHT_ALT DEL  &to MEDIA
             >;
         };
@@ -133,7 +133,7 @@
             bindings = <
                 &kp ESC    &hm N1 Q  &hm N2 W  &hm N3 E      &hm N4 R       &hm N5 T        &hm N6 Y    &hm N7 U    &hm N8 I      &hm N9 O     &hm N0 P     &td LA(BSPC) BSPC
                 &kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
-                &td CAPS LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &td FSLH BSLH  &td CAPS RSHFT
+                &td CAPS LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &td FSLH BSLH  &kp RIGHT_CONTROL
                                          &htl MEDIA BASE   &kp LCMD   &kp SPACE      &kp SPACE &hm RIGHT_ALT DEL  &htl MEDIA MEDIA
             >;
         };
