@@ -113,7 +113,7 @@
 
         base {
             bindings = <
-                &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &hm N0 GRAVE   &td BSPC LA(BSPC)
+                &kp ESC       &hm N1 Q   &hm N2 W   &hm N3 F       &hm N4 P       &hm N5 B    &hm N6 J    &hm N7 L      &hm N8 U      &hm N9 Y    &hm N0 GRAVE   &td LA(BSPC) BSPC
                 &kp TAB       &kp A   &kp R   &kp S       &kp T       &kp G    &kp M    &kp N                &kp E      &kp I    &kp O     &kp ENTER
                 &td CAPS LSHFT     &kp Z   &kp X   &kp C       &kp D       &kp V    &kp K    &kp H                &kp COMMA  &kp DOT  &kp FSLH  &td CAPS RSHFT
                                               &htl MEDIA BASE    &kp LCMD  &kp SPACE  &kp SPACE  &hm RIGHT_ALT DEL  &to MEDIA
@@ -124,15 +124,15 @@
         media {
             bindings = <
                 &hm F1 C_BRIGHTNESS_DEC      &hm F2 C_BRIGHTNESS_INC        &hm F3 C_AC_DESKTOP_SHOW_ALL_WINDOWS       &hm F4 C_AC_SEARCH        &kp F5      &kp F6       &hm F7 C_PREVIOUS           &hm F8 C_PLAY_PAUSE         &hm F9 C_NEXT    &hm F10 C_MUTE  &hm F11 C_VOLUME_DOWN &hm F12 C_VOL_UP
-                &kp EXCLAMATION  &kp AT_SIGN        &kp HASH        &kp DOLLAR        &kp PERCENT      &kp CARET       &kp AMPERSAND  &kp ASTERISK  &none  &none    &td UP_ARROW PG_UP   &none
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR         &none            &none          &none      &kp LEFT_ARROW        &td DOWN_ARROW PG_DN    &kp RIGHT
+                &kp EXCLAMATION  &kp AT_SIGN        &kp HASH        &kp DOLLAR        &kp PERCENT      &kp CARET       &kp AMPERSAND  &kp ASTERISK  &none  &none    &td PG_UP UP_ARROW   &none
+                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR         &none            &none          &none      &kp LEFT_ARROW        &td PG_DN DOWN_ARROW    &kp RIGHT
                                                         &to BASE         &kp LCMD  &kp SPACE           &kp SPACE       &hm RIGHT_ALT DEL          &to QWERTY
             >;
         };
 
         qwerty {
             bindings = <
-                &kp ESC    &hm N1 Q  &hm N2 W  &hm N3 E      &hm N4 R       &hm N5 T        &hm N6 Y    &hm N7 U    &hm N8 I      &hm N9 O     &hm N0 P     &td BSPC LA(BSPC)
+                &kp ESC    &hm N1 Q  &hm N2 W  &hm N3 E      &hm N4 R       &hm N5 T        &hm N6 Y    &hm N7 U    &hm N8 I      &hm N9 O     &hm N0 P     &td LA(BSPC) BSPC
                 &kp TAB    &kp A  &kp S  &kp D      &kp F       &kp G        &kp H    &kp J    &kp K      &kp L     &kp SEMI  &kp ENTER
                 &td CAPS LSHFT  &kp Z  &kp X  &kp C      &kp V       &kp B        &kp N    &kp M    &kp COMMA  &kp DOT   &td FSLH BSLH  &td CAPS RSHFT
                                          &htl MEDIA BASE   &lt MEDIA LCMD   &kp SPACE      &kp SPACE &hm RIGHT_ALT DEL  &htl MEDIA MEDIA
