@@ -156,7 +156,7 @@
             bindings = <
                 &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS     &hm F4 SEARCH       &kp F5          &kp F6              &hm F7 PREV     &hm F8 PLAY     &hm F9 NEXT     &hm F10 VOL_MUTE    &hm F11 VOL_DOWN        &hm F12 VOL_UP
                 &kp TAB         &none           &none           &none               &none           &none               &none           &none           &none           &kp LC(LG(LS(N4)))  &none                   &kp ENTER
-                &kp LSHFT       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &hm BT_CLR SPACE    &none           &none           &none           &none               &hm FSLH BSLH           &kp RIGHT_CONTROL
+                &kp LSHFT       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &hm BT_CLR SPACE    &none           &none           &none           &none               &none                   &kp RIGHT_CONTROL
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp SPACE       &hm RALT DEL    &htl LOWER LOWER
             >;
         };
