@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define DEFAULT 0
-#define MEDIA 1
+#define LOWER 1
 #define QWERTY 2
 
 // Media controls
@@ -138,7 +138,7 @@
                 &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 F        &hm N4 P        &hm N5 B        &hm N6 J        &hm N7 L        &hm N8 U        &hm N9 Y        &hm N0 GRAVE    &hm LA(BSPC) BSPC
                 &kp TAB         &kp A           &kp R           &kp S           &kp T           &kp G           &kp M           &kp N           &kp E           &kp I           &kp O           &kp ENTER
                 &kp LSHFT       &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &kp FSLH        &kp RIGHT_CONTROL
-                                                                &htl MEDIA DEFAULT &kp LCMD        &kp SPACE                       &kp SPACE       &hm RALT DEL    &to MEDIA
+                                                                &htl LOWER DEFAULT &kp LCMD        &kp SPACE                       &kp SPACE       &hm RALT DEL    &to LOWER
             >;
         };
 
@@ -157,7 +157,7 @@
                 &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 E        &hm N4 R        &hm N5 T        &hm N6 Y        &hm N7 U        &hm N8 I        &hm N9 O        &hm N0 P        &hm LA(BSPC) BSPC
                 &kp TAB         &kp A  &kp S    &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &kp SEMI        &kp ENTER
                 &kp LSHFT       &kp Z  &kp X    &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &hm FSLH BSLH   &kp RIGHT_CONTROL
-                                                                &htl MEDIA DEFAULT &kp LCMD        &kp SPACE                       &kp SPACE       &hm RALT DEL    &htl MEDIA MEDIA
+                                                                &htl LOWER DEFAULT &kp LCMD        &kp SPACE                       &kp SPACE       &hm RALT DEL    &htl LOWER LOWER
             >;
         };
     };
