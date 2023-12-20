@@ -135,9 +135,9 @@
 
         default_layer {
             bindings = <
-                &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 B        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &hm N0 EQUAL        &hm LA(BSPC) BSPC
-                &kp TAB         &kp A           &kp R           &kp S               &kp T           &kp G           &kp M           &kp N               &kp E               &kp I               &kp O               &kp ENTER
-                &kp LSHFT       &kp Z           &kp X           &kp C               &kp D           &kp V           &kp K           &kp H               &kp COMMA           &kp DOT             &kp MINUS           &kp RIGHT_ALT
+                &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 E            &hm N4 R        &hm N5 T        &hm N6 Y        &hm N7 U            &hm N8 I            &hm N9 O            &hm N0 P            &hm LA(BSPC) BSPC
+                &kp TAB         &kp A           &kp S           &kp D               &kp F           &kp G           &kp H           &kp J               &kp K               &kp L               &kp SEMICOLON       &kp ENTER
+                &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp N           &kp M               &kp COMMA           &kp DOT             &kp MINUS           &kp RIGHT_ALT
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
             >;
         };
