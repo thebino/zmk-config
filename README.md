@@ -2,6 +2,8 @@
 
 Personal [ZMK Firmware](https://zmk.dev/) configuration for a **Corne Wireless Choc LP**
 
-❌ Visualisation
+## Visualisation
 - https://keymap-drawer.streamlit.app/
 
+
+![keymap visualisation](./keymap.png)
