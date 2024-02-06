@@ -137,7 +137,7 @@
             bindings = <
                 &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &hm N0 EQUAL        &hm LA(BSPC) BSPC
                 &kp TAB         &kp A           &kp R           &kp S               &kp T           &kp D           &kp H           &kp N               &kp E               &kp I               &kp O               &kp ENTER
-                &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSL        &kp MINUS
+                &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
             >;
         };
