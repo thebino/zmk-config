@@ -168,7 +168,7 @@
         raise_layer {
             bindings = <
                 &kp ESC         &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &hm F8 UP           &kp F9              &kp F10             &kp F11
-                &kp TAB         &none           &none           &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LC(LG(LS(N4)))  &kp ENTER
+                &kp TAB         &none           &none           &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))      &kp ENTER
                 &kp LSHFT       &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &none           &none           &bt BT_CLR          &none               &none               &none               &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE LOWER
             >;
