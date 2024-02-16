@@ -79,7 +79,7 @@
     combos {
         compatible = "zmk,combos";
         combo_bracket_left {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <16 17>;
             bindings = <&kp LBKT>;
         };
