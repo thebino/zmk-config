@@ -84,14 +84,12 @@
             bindings = <&kp LBKT>;
         };
 
-        compatible = "zmk,combos";
         combo_bracket_left {
             timeout-ms = <30>;
             key-positions = <16 17>;
             bindings = <&kp LBKT>;
         };
 
-        compatible = "zmk,combos";
         combo_bracket_right {
             timeout-ms = <30>;
             key-positions = <18 19>;
