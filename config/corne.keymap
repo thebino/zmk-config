@@ -136,7 +136,7 @@
         default_layer {
             bindings = <
                 &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &hm N0 EQUAL        &hm LA(BSPC) BSPC
-                &kp TAB         &kp A           &kp R           &kp S               &hm LGUI T      &kp D           &kp H           &hm RGUI N          &kp E               &kp I               &kp O               &kp ENTER
+                &kp TAB         &kp A           &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &kp O               &kp ENTER
                 &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
             >;
