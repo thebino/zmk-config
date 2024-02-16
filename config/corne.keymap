@@ -78,6 +78,13 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_escape {
+            timeout-ms = <30>;
+            key-positions = <2 3>;
+            bindings = <&kp LBKT>;
+        };
+
+        compatible = "zmk,combos";
         combo_bracket_left {
             timeout-ms = <30>;
             key-positions = <16 17>;
