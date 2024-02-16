@@ -81,7 +81,7 @@
         combo_escape {
             timeout-ms = <30>;
             key-positions = <2 3>;
-            bindings = <&kp LBKT>;
+            bindings = <&kp ESC>;
         };
 
         combo_bracket_left {
