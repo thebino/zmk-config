@@ -86,31 +86,31 @@
 
         compatible = "zmk,combos";
         combo_bracket_right {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <18 19>;
             bindings = <&kp RBKT>;
         };
 
         combo_brace_left {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <15 16>;
             bindings = <&kp LEFT_BRACE>;
         };
 
         combo_brace_right {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <19 20>;
             bindings = <&kp RIGHT_BRACE>;
         };
 
         combo_parenthesis_left {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <28 29>;
             bindings = <&kp LEFT_PARENTHESIS>;
         };
 
         combo_parenthesis_right {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <30 31>;
             bindings = <&kp RIGHT_PARENTHESIS>;
         };
