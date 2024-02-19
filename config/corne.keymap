@@ -149,7 +149,7 @@
         default_layer {
             bindings = <
                 &kp ESC         &hm N1 Q        &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &hm N0 EQUAL        &hm LA(BSPC) BSPC
-                &kp TAB         &kp A           &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &kp O               &kp ENTER
+                &kp TAB         &hm LALT A      &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O          &kp ENTER
                 &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
             >;
@@ -158,7 +158,7 @@
         lower_layer {
             bindings = <
                 &kp ESC         &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS         &hm F4 SEARCH   &kp F5          &hm PG_DN DOWN  &kp RIGHT &none     &hm F9 VOL_MUTE     &hm F10 VOL_DOWN    &hm F11 VOL_UP
-                &kp TAB         &kp EXCLAMATION &kp AT_SIGN     &kp HASH            &kp DOLLAR      &kp PERCENT     &kp CARET       &kp AMPERSAND       &kp SEMICOLON       &kp APOSTROPHE      &kp ASTERISK        &kp ENTER
+                &kp TAB         &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp CARET       &hm RGUI AMPERSAND  &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK   &kp ENTER
                 &kp LSHFT       &none           &none           &none               &none           &none           &hm PG_UP UP    &kp LEFT            &kp GRAVE           &none               &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
 
