@@ -79,8 +79,16 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&hm N1 ESC>, <&hm N1 Q>;
+            bindings = <&hm N1 Q>, <&hm N1 ESC>;
         };
+
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp A>, <&kp TAP>;
+
+        }
     };
 
     combos {
@@ -165,7 +173,7 @@
         lower_layer {
             bindings = <
                 &kp ESC         &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS         &hm F4 SEARCH   &kp F5          &hm PG_DN DOWN  &kp RIGHT &none     &hm F9 VOL_MUTE     &hm F10 VOL_DOWN    &hm F11 VOL_UP
-                &kp TAB         &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp CARET       &hm RGUI AMPERSAND  &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK   &kp ENTER
+                &kp td1         &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp CARET       &hm RGUI AMPERSAND  &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK   &kp ENTER
                 &kp LSHFT       &none           &none           &none               &none           &none           &hm PG_UP UP    &kp LEFT            &kp GRAVE           &none               &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &hm RALT DEL        &htl RAISE DEFAULT
 
