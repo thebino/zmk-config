@@ -89,6 +89,13 @@
             bindings = <&hm LALT A>, <&kp TAP>;
 
         };
+
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&hm N0 EQUAL>, <&kp MINUS>;
+        };
     };
 
     combos {
@@ -163,7 +170,7 @@
 
         default_layer {
             bindings = <
-                &kp ESC         &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &hm N0 EQUAL        &hm LA(BSPC) BSPC
+                &kp ESC         &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &td2               &hm LA(BSPC) BSPC
                 &kp TAB         &td1            &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O          &kp ENTER
                 &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
