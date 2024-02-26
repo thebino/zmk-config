@@ -6,4 +6,4 @@ Personal [ZMK Firmware](https://zmk.dev/) configuration for a **Corne Wireless C
 - https://keymap-drawer.streamlit.app/
 
 
-![keymap visualisation](./keymap.png)
+![keymap visualisation](./keymap.svg)
