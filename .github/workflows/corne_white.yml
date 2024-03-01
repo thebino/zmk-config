@@ -1,0 +1,25 @@
+name: 'Corne White'
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'includes/*'
+      - 'config/corne_white*'
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: corne_white_build                 # default: "build.yaml"
+      config_path: config                                  # default: "config"
+      archive_name: corne_white                            # default: "firmware"
+
+  drawer:
+    needs: build
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/corne_white.keymap"         # path to the keymaps to parse
+      config_path: "config/corne_white.yaml"               # config file, ignored if not exists
+      output_folder: "images"                              # path to save produced SVG and keymap YAML files
