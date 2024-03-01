@@ -1,0 +1,26 @@
+name: 'Corne 6-colume'
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'corne_6-column.yaml'
+      - 'config/corne_6-column.conf'
+      - 'config/corne_6-column.keymap'
+      - 'config/corne_6-column.yaml'
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: swept.yaml
+      archive_name: swept
+  drawer:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write  # allow workflow to commit to the repo
+    with:
+      keymap_patterns: "config/orne_6-column.keymap"      # path to the keymaps to parse
+      config_path: "config/corne_6-column.yaml"           # config file, ignored if not exists
+      output_folder: "images"                                  # path to save produced SVG and keymap YAML files
+      parse_args: ""                                      # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
+      draw_args: ""                                       # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@maina
