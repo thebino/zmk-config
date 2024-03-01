@@ -21,5 +21,6 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/corne_white.keymap"         # path to the keymaps to parse
+      draw_args: "corne:'-k corne_rotated -l LAYOUT_split_3x5_3'"
       config_path: "config/corne_white.yaml"               # config file, ignored if not exists
       output_folder: "images"                              # path to save produced SVG and keymap YAML files
