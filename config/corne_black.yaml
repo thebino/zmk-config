@@ -1,6 +1,6 @@
 layout: 
   qmk_keyboard: corne_rotated
-  qmk_layout: LAYOUT_split_3x6_3
+  qmk_layout: LAYOUT_split_3x5_3
   
 draw_config:
   # key dimensions, non-ortho layouts use key_h for width as well
