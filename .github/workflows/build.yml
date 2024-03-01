@@ -12,5 +12,5 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
-      build_matrix_path: scorne_6-column.yaml
+      build_matrix_path: corne_6-column.yaml
       archive_name: corne_6-column
