@@ -1,4 +1,4 @@
-name: 'Corne 6-colume'
+name: 'Corne 6-column'
 on:
   workflow_dispatch:
   push:
