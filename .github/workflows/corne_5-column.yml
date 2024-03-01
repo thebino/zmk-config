@@ -1,6 +1,6 @@
 name: 'Corne 5-colume'
 on:
-  workwlow_dispatch:
+  workflow_dispatch:
   push:
     paths:
       - 'corne_5-column.yaml'
