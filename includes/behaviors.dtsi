@@ -1,0 +1,74 @@
+
+/ {
+    behaviors {
+        /*
+         * htl
+         *
+         * - tab once to switch layer
+         * - hold to enable layer until release
+         */
+        htl: hold_tab_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAB_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&to>;
+        };
+
+        /*
+         * hm
+         * 
+         * - tab once for key press 2nd item
+         * - hold for key press 1st item
+         */
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        // different key press on each press (LSHFT -> CAPS Lock)
+        // https://zmk.dev/docs/behaviors/tap-dance
+
+        /*
+         * td_caps
+         *
+         * - tab once for 2nd item
+         * - tab twice for 1st item
+         */
+        td_caps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CAPS";
+            #binding-cells = <0>;
+            tapping-term-ms = <400>;
+            bindings = <&kp CAPS>, <&kp LSHFT>;
+        };
+
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&hm N1 Q>, <&hm N1 ESC>;
+        };
+
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&hm LALT A>, <&kp TAB>;
+        };
+
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&hm N0 EQUAL>, <&kp MINUS>;
+        };
+    };
+};
