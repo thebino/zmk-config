@@ -186,7 +186,6 @@ draw_config:
     material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
   use_local_cache: true
 
-
 parse_config:
   preprocess: true
   skip_binding_parsing: false
@@ -323,12 +322,15 @@ parse_config:
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
     LA(BSPC): $$mdi:backspace$$
+    LG(LS(N4)): $$tabler:screenshot$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
     DOWN: $$mdi:arrow-down-bold$$
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
+    PG_DN: $$mdi:menu-down$$
+    PG_UP: $$mdi:menu-up$$
 
     # Whitespace
     ENTER:
@@ -353,8 +355,11 @@ parse_config:
 
     # Sound
     C_MUTE: $$mdi:volume-off$$
+    K_MUTE: $$mdi:volume-off$$
     C_VOL_UP: $$mdi:volume-high$$
+    C_VOLUME_UP: $$mdi:volume-high$$
     C_VOL_DOWN: $$mdi:volume-low$$
+    C_VOLUME_DOWN: $$mdi:volume-low$$
 
     # Media
     C_NEXT: $$mdi:skip-next$$
@@ -368,11 +373,16 @@ parse_config:
     # Settings
     C_BRI_UP: $$mdi:brightness-5$$
     C_BRI_DN: $$mdi:brightness-7$$
+    C_BRIGHTNESS_INC: $$mdi:brightness-5$$
+    C_BRIGHTNESS_DEC: $$mdi:brightness-7$$
 
     # System
     C_POWER: $$mdi:power-standby$$
     C_AL_LOCK: $$mdi:lock$$
     K_CANCEL: $$mdi:close-box$$
+    C_AC_SEARCH: $$mdi:magnify$$
+    C_AC_DESKTOP_SHOW_ALL_WINDOWS: $$mdi:apps$$
+
 
     # Zoom
     RG(RS(A)):
@@ -384,17 +394,15 @@ parse_config:
 
   zmk_combos:
     combo_bracket_left:
-        align: top
+        type: 'vertical_combo'
     combo_bracket_right:
-        align: top
+        type: 'vertical_combo'
     combo_brace_left:
-        align: top
+        type: 'vertical_combo'
     combo_brace_right:
-        align: top
+        type: 'vertical_combo'
     combo_parenthesis_left:
-        align: top
-        offset: 0.03
+        type: 'vertical_combo'
     combo_parenthesis_right:
-        align: top
-        offset: 0.03
+        type: 'vertical_combo'
 
