@@ -1,53 +1,33 @@
-layout: 
-  qmk_keyboard: corne_rotated
-  qmk_layout: LAYOUT_split_3x5_3
-  
 draw_config:
-  # key dimensions, non-ortho layouts use key_h for width as well
-  key_h: 80
-
-  # keys border radius
-  key_rx: 4
-  key_ry: 4
-
-  # key labels line spacing for multi-line labels
-  line_spacing: 1
-
-  # combo box dimensions
-  combo_w: 36
-  combo_h: 36
-
-  # padding from the edge of cap to top and bottom legends
-  small_pad: 4
-
-  # Padding between keys
-  inner_pad_w: 1.5
-  inner_pad_h: 1.5
-
-  # padding between layers
-  outer_pad_w: 0
-  outer_pad_h: 0
-
-  # gap between two halves for ortho layout generator
-  # split_gap: 20 # This doesn't seem to have any effect either? 🤔
-
-  # as it reads on the tin can, this comment is here for consistency
+  key_w: 80.0
+  key_h: 80.0
+  split_gap: 30.0
+  combo_w: 34.0
+  combo_h: 34.0
+  key_rx: 4.0
+  key_ry: 4.0
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
+  inner_pad_w: 1.2
+  inner_pad_h: 1.2
+  outer_pad_w: 0.0
+  outer_pad_h: 20.0
+  line_spacing: 1.0
+  arc_radius: 6.0
   append_colon_to_layer_header: false
-
-  # shrink font size for legends wider than this many chars, set to 0 to disable
-  # ideal value depends on the font size defined in svg_style and width of the boxes
-  shrink_wide_legends: 5
-
-  # Glyphs dimensions
-  glyph_tap_size: 26
-  glyph_hold_size: 18
-  glyph_shifted_size: 18
-
-  # Custom CSS
+  small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  draw_key_sides: false
+  key_side_pars:
+    rel_x: 0
+    rel_y: 4
+    rel_w: 12
+    rel_h: 12
+    rx: 4
+    ry: 4
   svg_style: |
-    --color-bg: #1a1b26;
-    --color-line: #565f89
-    
     /* inherit to force styles through use tags */
     svg path {
         fill: inherit;
@@ -56,34 +36,17 @@ draw_config:
     /* font and background color specifications */
     svg.keymap {
         font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 18px;
+        font-size: 14px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
-        background-color: transparent;
+        fill: #24292e;
     }
 
-    /* Keys */
-    rect.key,
-    rect.combo {
-        fill: #ECEFF1;
-        stroke: #FFFFFF;
-    }
-    .tap {
-        fill: #263238;
-    }
-    .shifted,
-    .hold {
-        font-size: 18px;
-        text-anchor: middle;
-    }
-    .shifted {
-        dominant-baseline: hanging;
-        fill: var(--color--key--text--shifted);
-        translate: -25px 2px;
-    }
-    .hold {
-        dominant-baseline: ideographic;
-        fill: #607D8B;
+    /* default key styling */
+    rect.key {
+        fill: #f6f8fa;
+        stroke: #c9cccf;
+        stroke-width: 1;
     }
 
     /* default key side styling, only used is draw_key_sides is set */
@@ -148,7 +111,7 @@ draw_config:
 
     /* styling for combo dendrons */
     path.combo {
-        stroke-width: 1;
+        stroke-width: 0;
         stroke: gray;
         fill: none;
     }
@@ -164,189 +127,153 @@ draw_config:
     .icon-tabler > path[stroke="none"][fill="none"] {
         visibility: hidden;
     }
-    .keypos-13,
-    .keypos-16 {
-        fill: #73daca;
-        stroke: #41a6b5;
+    /* End Tabler Icons Cleanup */
+  svg_extra_style: |
+    svg.keymap {
+        --color--material--blue-gray--50: rgb(236, 239, 241);
+        --color--material--blue-gray--900: rgb(38, 50, 56);
+
+        /* keymap */
+        --color-keymap-text: #1a1b26;
+
+        /* key */
+        --color-key-bg: #F6F8FA;
+        --color-key-border: #c9cccf;
+        --color-key-text-t: #f6f8fa;
+        --color-key-text-h: var(--color--material--blue-gray--900);
+        --color-key-text-s: var(--color--material--blue-gray--900);
+
+        /* combo */
+        --color-combo-bg: var(--color--material--blue-gray--50);
+        --color-combo-border: var(--color--material--blue-gray--50);
+        --color-combo-text-t: var(--color--material--blue-gray--900);
+        --color-combo-text-h: var(--color--material--blue-gray--900);
+        --color-combo-text-s: var(--color--material--blue-gray--900);
+
+        font-family: Fantasque Sans Mono, JetBrains Mono, monospace;
+        font-size: 14px;
+        fill: var(--color-keymap-text);
     }
-    
+    rect.key {
+      fill: var(--color-key-bg); 
+      text.label {
+        font-size: 14px;
+      }
+      text.hold {
+        font-size: 12px;
+      }
+    }
+    rect.held, rect.combo.held {
+        fill: #ea7d61;
+    }
+    .keypos-16,
+    .keypos-19 {
+        --color-key-bg: #94DEC1;
+    }
+    .keypos-38,
+    .keypos-39 {
+        --color-key-bg: #8DC5DD;
+    }
+  shrink_wide_legends: 5
+  glyph_tap_size: 26
+  glyph_hold_size: 16
+  glyph_shifted_size: 16
+  glyphs: {}
+  glyph_urls:
+    tabler: https://unpkg.com/@tabler/icons/icons/{}.svg
+    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
+    mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
+    material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
+  use_local_cache: true
+
+
 parse_config:
-  mark_alternate_layer_activators: true
-  sticky_label: $$mdi:gesture-tap-hold$$
-  trans_legend:
-    tap: $$mdi:transfer$$
-    type: trans
-
+  preprocess: true
+  skip_binding_parsing: false
   raw_binding_map:
-    # Layers
-    "&smart_num L2 0":
-      shifted: $$mdi:alpha-w-box$$
-      tap: L2
-      hold: $$mdi:gesture-tap-hold$$
-    "&csl Fn":
-      tap: Fn
-      hold: $$mdi:close-box$$
-    "&csl L2":
-      tap: L2
-      hold: $$mdi:close-box$$
-    "&cmo Fn":
-      tap: $$mdi:close-box$$
-      hold: Fn
-    "&cmo L2":
-      tap: $$mdi:close-box$$
-      hold: L2
-
-    # Modifiers
-    "&caps_word": $$mdi:alpha-w-box$$
-    "&kt RSHIFT":
-      tap: $$mdi:apple-keyboard-shift$$
-      hold: $$mdi:toggle-switch$$
-
-    # Empty
-    "&none":
-      tap: $$mdi:minus-circle-outline$$
-      type: none
-
-    # Whitespace
-    "&bkspc_del":
-      type: backspace
-      tap: $$mdi:backspace$$
-      shifted: $$mdi:backspace-reverse-outline$$
-
-    # Bluetooth
-    "&bt BT_SEL 0":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 1
-    "&bt BT_SEL 1":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 2
-    "&bt BT_SEL 2":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 3
-    "&bt BT_SEL 3":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 4
-    "&bt BT_SEL 4":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 5
-    "&out OUT_TOG":
-      shifted: $$mdi:usb$$
-      tap: $$mdi:toggle-switch$$
-      hold: $$mdi:bluetooth$$
-
-    # Reset
-    "&sys_reset":
-      type: bootloader
-      tap: $$mdi:backup-restore$$
-    "&bootloader":
-      tap: $$mdi:progress-download$$
-
-  # ZMK
+    '&td0': {t: Q, h: 1, s: '$$mdi:keyboard-esc$$'}
+    '&td1': {t: A, h: '$$mdi:apple-keyboard-option$$', s: '$$mdi:keyboard-tab$$'}
+    '&td2': {t: '=', h: 0, s: '-'}
+    '&bt BT_CLR': '$$mdi:bluetooth-off$$'
+    '&bt BT_SEL 0': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-0$$}
+    '&bt BT_SEL 1': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-1$$}
+    '&bt BT_SEL 2': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-2$$}
+    '&bt BT_SEL 3': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-3$$}
+    '&bt BT_SEL 4': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-4$$}
+    '&bt BT_PRV':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-previous$$}
+    '&bt BT_NXT':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-next$$}
+  sticky_label: $$mdi:gesture-tap-hold$$
+  toggle_label: toggle
+  trans_legend:
+    t: $$mdi:transfer$$
+    type: trans
+  mark_alternate_layer_activators: true
+  zmk_remove_keycode_prefix: []
   zmk_keycode_map:
-    # Symbols
-    EXCLAMATION: "!"
-    EXCL: "!"
-    AT_SIGN: "@"
-    AT: "@"
-    HASH: "#"
-    POUND: "#"
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
     DOLLAR: $
     DLLR: $
-    PERCENT: "%"
-    PRCNT: "%"
+    PERCENT: '%'
+    PRCNT: '%'
     CARET: ^
-    AMPERSAND: "&"
-    AMPS: "&"
-    ASTERISK: "*"
-    ASTRK: "*"
-    STAR: "*"
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
     LEFT_PARENTHESIS: (
     LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
-    EQUAL:
-      tap: "="
-      shifted: "+"
+    EQUAL: '='
     PLUS: +
-    MINUS:
-      tap: "-"
-      shifted: "_"
+    MINUS: '-'
     UNDERSCORE: _
     UNDER: _
-    SLASH:
-      tap: "/"
-      shifted: "?"
-    FSLH:
-      tap: "/"
-      shifted: "?"
-    QUESTION: "?"
-    QMARK: "?"
-    BACKSLASH:
-      tap: '\'
-      shifted: "|"
-    BSLH:
-      tap: '\'
-      shifted: "|"
-    PIPE: "|"
+    SLASH: /
+    FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PIPE: '|'
     NON_US_BACKSLASH: \
-    PIPE2: "|"
-    NON_US_BSLH: "|"
-    SEMICOLON:
-      tap: ";"
-      shifted: ":"
-    SEMI:
-      tap: ";"
-      shifted: ":"
-    COLON: ":"
-    SINGLE_QUOTE:
-      tap: "'"
-      shifted: '"'
-    SQT:
-      tap: "'"
-      shifted: '"'
-    APOSTROPHE: <
-    APOS: .
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
     DOUBLE_QUOTES: '"'
     DQT: '"'
-
+    COMMA: ','
     LESS_THAN: <
     LT: <
-    DOT:
-      tap: "."
-      shifted: ">"
-    COMMA:
-      tap: ","
-      shifted: "<"
-    GREATER_THAN: ">"
-    GT: ">"
-    LEFT_BRACKET:
-      tap: "["
-      shifted: "{"
-    LBKT:
-      tap: "["
-      shifted: "{"
-    LEFT_BRACE: "{"
-    LBRC: "{"
-    RIGHT_BRACKET:
-      tap: "]"
-      shifted: "}"
-    RBKT:
-      tap: "]"
-      shifted: "}"
-    RIGHT_BRACE: "}"
-    RBRC: "}"
-    GRAVE:
-      tap: "`"
-      shifted: "~"
-    TILDE: "~"
-    NON_US_HASH: "#"
-    NUHS: "#"
-    TILDE2: "~"
+    PERIOD: .
+    DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    GRAVE: '`'
+    TILDE: '~'
+    NON_US_HASH: '#'
+    NUHS: '#'
+    TILDE2: '~'
 
     # Numbers
     N1:
@@ -386,13 +313,16 @@ parse_config:
     LSHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
     LCMD: $$mdi:apple-keyboard-command$$
+    LGUI: $$mdi:apple-keyboard-command$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RALT: $$mdi:apple-keyboard-option$$
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
+    RGUI: $$mdi:apple-keyboard-command$$
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
+    LA(BSPC): $$mdi:backspace$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
@@ -424,7 +354,7 @@ parse_config:
     # Sound
     C_MUTE: $$mdi:volume-off$$
     C_VOL_UP: $$mdi:volume-high$$
-    C_VOL_DN: $$mdi:volume-low$$
+    C_VOL_DOWN: $$mdi:volume-low$$
 
     # Media
     C_NEXT: $$mdi:skip-next$$
@@ -453,37 +383,18 @@ parse_config:
       hold: zoom
 
   zmk_combos:
-    combo_to_2:
-      align: top
-    combo_to_3:
-      align: top
-    combo_bt_clear:
-      align: top
-      offset: 0.03
-    combo_mute:
-      align: top
-      offset: 0.15
-    combo_minus:
-      key:
-        shifted: "_"
-        hold: "-"
-    combo_equal:
-      key:
-        shifted: "+"
-        hold: "="
-    combo_backslash:
-      key:
-        shifted: "|"
-        hold: \
-    combo_lbkt:
-      key:
-        shifted: "{"
-        hold: "["
-    combo_rbkt:
-      key:
-        shifted: "}"
-        hold: "]"
-    combo_semicolon:
-      key:
-        shifted: ":"
-        hold: ";"
+    combo_bracket_left:
+        align: top
+    combo_bracket_right:
+        align: top
+    combo_brace_left:
+        align: top
+    combo_brace_right:
+        align: top
+    combo_parenthesis_left:
+        align: top
+        offset: 0.03
+    combo_parenthesis_right:
+        align: top
+        offset: 0.03
+
