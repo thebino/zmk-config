@@ -1,9 +1,17 @@
 # zmk-config
 
-Personal [ZMK Firmware](https://zmk.dev/) configuration for a **Corne Wireless Choc LP**
+## Corne White
 
-## Visualisation
-- https://keymap-drawer.streamlit.app/
+[Corne Wireless](https://github.com/foostan/crkbd/) 6-column with low-profile Kailh Choc Kevs (pro red & brown tactile)
+| Keyboard      | Keymap        |
+| ------------- |:-------------:|
+| <img width="800" src="./images/corne_white.jpg"> | <img width="800" src="./images/corne_white.svg"> |
 
 
-![keymap visualisation](./keymap.svg)
+## Corne Black
+
+[Corne Wireless](https://github.com/foostan/crkbd/) 5-column with low-profile Kailh Choc Kevs (pro red & brown tactile)
+
+| Keyboard      | Keymap        |
+| ------------- |:-------------:|
+| <img width="800" src="./images/corne_black.jpg"> | <img width="800" src="./images/corne_black.svg"> |
