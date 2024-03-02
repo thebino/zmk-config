@@ -111,10 +111,10 @@ layers:
   - LG(LS(4))
   - ''
   - ''
-  - {t: '$$mdi:bluetooth-connect$$', h: '0'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '1'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '2'}
-  - {t: '$$mdi:bluetooth-connect$$', h: '3'}
+  - {t: '$$mdi:numeric-0$$', h: '$$mdi:bluetooth$$'}
+  - {t: '$$mdi:numeric-1$$', h: '$$mdi:bluetooth$$'}
+  - {t: '$$mdi:numeric-2$$', h: '$$mdi:bluetooth$$'}
+  - {t: '$$mdi:numeric-3$$', h: '$$mdi:bluetooth$$'}
   - ''
   - ''
   - $$mdi:bluetooth-off$$
