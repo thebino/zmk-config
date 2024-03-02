@@ -37,16 +37,16 @@ layers:
   - {t: '$$mdi:backspace$$', h: '$$mdi:backspace$$'}
   - {t: default, h: raise}
   lower:
-  - {t: BRIGHTNESS DEC, h: F1}
-  - {t: BRIGHTNESS INC, h: F2}
-  - {t: AC DESKTOP SHOW ALL WINDOWS, h: F3}
-  - {t: AC SEARCH, h: F4}
+  - {t: '$$mdi:brightness-7$$', h: F1}
+  - {t: '$$mdi:brightness-5$$', h: F2}
+  - {t: '$$mdi:apps$$', h: F3}
+  - {t: '$$mdi:magnify$$', h: F4}
   - F5
-  - {t: '$$mdi:arrow-down-bold$$', h: PG DN}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:menu-down$$'}
   - $$mdi:arrow-right-bold$$
-  - {t: MUTE, h: F9}
-  - {t: VOLUME DOWN, h: F10}
-  - {t: VOLUME UP, h: F11}
+  - {t: '$$mdi:volume-off$$', h: F9}
+  - {t: '$$mdi:volume-low$$', h: F10}
+  - {t: '$$mdi:volume-high$$', h: F11}
   - {t: '!', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '@', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '#', h: '$$mdi:apple-keyboard-shift$$'}
@@ -62,7 +62,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: '$$mdi:arrow-up-bold$$', h: PG UP}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:menu-up$$'}
   - $$mdi:arrow-left-bold$$
   - '`'
   - ''
@@ -70,7 +70,7 @@ layers:
   - {t: default, h: lower, type: held}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - RIGHT CONTROL
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: default, h: raise}
   raise:
@@ -93,7 +93,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - LG(LS(4))
+  - $$tabler:screenshot$$
   - {t: '$$mdi:numeric-0$$', h: '$$mdi:bluetooth$$'}
   - {t: '$$mdi:numeric-1$$', h: '$$mdi:bluetooth$$'}
   - {t: '$$mdi:numeric-2$$', h: '$$mdi:bluetooth$$'}
@@ -107,7 +107,7 @@ layers:
   - {t: default, h: lower, type: held}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - RIGHT CONTROL
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: lower, h: raise, type: held}
   tri:
@@ -144,27 +144,25 @@ layers:
   - {t: default, h: lower, type: held}
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
-  - RIGHT CONTROL
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: lower, h: raise, type: held}
 combos:
 - p: [12, 13]
   k: '{'
-  a: top
+  type: vertical_combo
 - p: [13, 14]
   k: '['
-  a: top
+  type: vertical_combo
 - p: [15, 16]
   k: ']'
-  a: top
+  type: vertical_combo
 - p: [16, 17]
   k: '}'
-  a: top
+  type: vertical_combo
 - p: [23, 24]
   k: (
-  a: top
-  o: 0.03
+  type: vertical_combo
 - p: [25, 26]
   k: )
-  a: top
-  o: 0.03
+  type: vertical_combo
