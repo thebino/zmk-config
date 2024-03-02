@@ -194,6 +194,14 @@ parse_config:
     '&td0': {t: Q, h: 1, s: '$$mdi:keyboard-esc$$'}
     '&td1': {t: A, h: '$$mdi:apple-keyboard-option$$', s: '$$mdi:keyboard-tab$$'}
     '&td2': {t: '=', h: 0, s: '-'}
+    '&bt BT_CLR': '$$mdi:bluetooth-off$$'
+    '&bt BT_SEL 0': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-0$$}
+    '&bt BT_SEL 1': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-1$$}
+    '&bt BT_SEL 2': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-2$$}
+    '&bt BT_SEL 3': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-3$$}
+    '&bt BT_SEL 4': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-4$$}
+    '&bt BT_PRV':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-previous$$}
+    '&bt BT_NXT':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-next$$}
   sticky_label: $$mdi:gesture-tap-hold$$
   toggle_label: toggle
   trans_legend:
