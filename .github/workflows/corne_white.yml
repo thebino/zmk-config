@@ -3,9 +3,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '*build.yaml'
       - 'includes/*'
-      - 'config/corne_white*'
+      - 'config_white/*'
 
 jobs:
   build:
@@ -13,4 +12,5 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
       build_matrix_path: corne_white_build.yaml            # default: "build.yaml"
+      config_path: config_white                            # default: "config"
       archive_name: corne_white                            # default: "firmware"
