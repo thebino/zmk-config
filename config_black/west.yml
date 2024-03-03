@@ -8,4 +8,4 @@ manifest:
       revision: main
       import: app/west.yml
   self:
-    path: config_white
+    path: config_black
