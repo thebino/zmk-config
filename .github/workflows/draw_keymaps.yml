@@ -1,7 +1,6 @@
 name: 'Draw keymaps'
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   white:

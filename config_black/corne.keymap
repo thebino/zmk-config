@@ -124,6 +124,12 @@
             bindings = <&kp RIGHT_BRACE>;
         };
 
+        combo_pipe {
+            timeout-ms = <30>;
+            key-positions = <22 23>;
+            bindings = <&kp PIPE>;
+        };
+
         combo_parenthesis_left {
             timeout-ms = <30>;
             key-positions = <23 24>;
