@@ -36,10 +36,21 @@ jobs:
       contents: write
 
     steps:
-      - uses: stefanzweifel/git-auto-commit-action@v5
+
+      - name: Download artifact
+        id: download-artifact
+        uses: actions/download-artifact@v4
         with:
-          commit_message: 'keymap-drawer render'
-          commit_options: ""
-          push_options: ""
-          skip_fetch: false
-          file_pattern: 'images/*.svg'
+          path: images
+
+      - name: Debug
+        run: |
+          ls -al images
+
+      # - uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     commit_message: 'keymap-drawer render'
+      #     commit_options: ""
+      #     push_options: ""
+      #     skip_fetch: false
+      #     file_pattern: 'images/*.svg'
