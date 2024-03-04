@@ -16,7 +16,7 @@ jobs:
       output_folder: "images"                              # path to save produced SVG and keymap YAML files
       destination: "artifact"
       draw_args: "corne_white:'-k corne_rotated -l LAYOUT_split_3x6_3'"
-      artifact_name: "corne_white"
+      artifact_name: "corne_white.zip"
 
   black:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
@@ -26,7 +26,7 @@ jobs:
       output_folder: "images"                              # path to save produced SVG and keymap YAML files
       destination: "artifact"
       draw_args: "corne_black:'-k corne_rotated -l LAYOUT_split_3x5_3'"
-      artifact_name: "corne_black"
+      artifact_name: "corne_black.zip"
 
 
   commit:
@@ -46,7 +46,7 @@ jobs:
       - name: Debug
         run: |
           ls -al images
-          unzip images/*
+          unzip images/*.zip
           ls -al images
 
       # - uses: stefanzweifel/git-auto-commit-action@v5
