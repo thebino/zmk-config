@@ -29,15 +29,15 @@ jobs:
       artifact_name: "corne_black"
 
 
-  # commit:
-  #   needs: [white, black]
-  #   permissions:
-  #     contents: write
+  commit:
+    needs: [white, black]
+    permissions:
+      contents: write
 
-  #   uses: stefanzweifel/git-auto-commit-action@v5
-  #   with:
-  #     commit_message: 'keymap-drawer render'
-  #     commit_options: ""
-  #     push_options: ""
-  #     skip_fetch: false
-  #     file_pattern: 'images/*.svg'
+    uses: stefanzweifel/git-auto-commit-action@v5
+    with:
+      commit_message: 'keymap-drawer render'
+      commit_options: ""
+      push_options: ""
+      skip_fetch: false
+      file_pattern: 'images/*.svg'
