@@ -46,7 +46,8 @@ jobs:
       - name: Debug
         run: |
           ls -al images
-          unzip images/*.zip
+          unzip images/corne_white.zip
+          unzip images/corne_black.zip
           ls -al images
 
       # - uses: stefanzweifel/git-auto-commit-action@v5
