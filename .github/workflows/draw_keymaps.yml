@@ -1,6 +1,10 @@
 name: 'Draw keymaps'
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+  push:
+    paths:
+      - 'config*/*.keymap'
+      - 'includes/*.dtsi'
 
 jobs:
   white:
