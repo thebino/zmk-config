@@ -1,6 +1,5 @@
 name: 'Draw keymaps'
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 jobs:
   white:
@@ -28,12 +27,13 @@ jobs:
 
   commit:
     needs: [white, black]
-    uses: stefanzweifel/git-auto-commit-action@v5
     permissions:
       contents: write
-    with:
-      commit_message: 'keymap-drawer render'
-      commit_options: ""
-      push_options: ""
-      skip_fetch: false
-      file_pattern: 'images/*.svg'
+
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: 'keymap-drawer render'
+        commit_options: ""
+        push_options: ""
+        skip_fetch: false
+        file_pattern: 'images/*.svg'
