@@ -34,10 +34,11 @@ jobs:
     permissions:
       contents: write
 
-    uses: stefanzweifel/git-auto-commit-action@v5
-    with:
-      commit_message: 'keymap-drawer render'
-      commit_options: ""
-      push_options: ""
-      skip_fetch: false
-      file_pattern: 'images/*.svg'
+    steps:
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'keymap-drawer render'
+          commit_options: ""
+          push_options: ""
+          skip_fetch: false
+          file_pattern: 'images/*.svg'
