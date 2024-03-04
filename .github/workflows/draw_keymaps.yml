@@ -31,6 +31,7 @@ jobs:
 
   commit:
     needs: [white, black]
+    runs-on: ubuntu-latest
     permissions:
       contents: write
 
