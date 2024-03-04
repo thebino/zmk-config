@@ -44,7 +44,7 @@ draw_config:
 
     /* default key styling */
     rect.key {
-        fill: #f6f8fa;
+        fill: #4b4c4c;
         stroke: #c9cccf;
         stroke-width: 1;
     }
@@ -165,14 +165,6 @@ draw_config:
     }
     rect.held, rect.combo.held {
         fill: #ea7d61;
-    }
-    .keypos-16,
-    .keypos-19 {
-        --color-key-bg: #94DEC1;
-    }
-    .keypos-38,
-    .keypos-39 {
-        --color-key-bg: #8DC5DD;
     }
   shrink_wide_legends: 5
   glyph_tap_size: 26
