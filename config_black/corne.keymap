@@ -8,6 +8,9 @@
 #define RAISE 2
 
 // Media controls
+#define VOL_DOWN C_VOLUME_DOWN
+#define VOL_UP C_VOLUME_UP
+#define VOL_MUTE K_MUTE
 #define PREV C_PREVIOUS
 #define PLAY C_PLAY_PAUSE
 #define NEXT C_NEXT
@@ -22,6 +25,10 @@
 
 
 / {
+    chosen {
+      zmk,matrix_transform = &five_column_transform;
+    };
+    
     behaviors {
         /*
          * htl
@@ -96,52 +103,47 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_escape {
+
+        combo_brace_left {
             timeout-ms = <30>;
-            key-positions = <2 3>;
-            bindings = <&kp ESC>;
+            key-positions = <12 13>;
+            bindings = <&kp LEFT_BRACE>;
         };
 
         combo_bracket_left {
             timeout-ms = <30>;
-            key-positions = <16 17>;
+            key-positions = <13 14>;
             bindings = <&kp LBKT>;
         };
 
         combo_bracket_right {
             timeout-ms = <30>;
-            key-positions = <18 19>;
-            bindings = <&kp RBKT>;
-        };
-
-        combo_brace_left {
-            timeout-ms = <30>;
             key-positions = <15 16>;
-            bindings = <&kp LEFT_BRACE>;
+            bindings = <&kp RBKT>;
         };
 
         combo_brace_right {
             timeout-ms = <30>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             bindings = <&kp RIGHT_BRACE>;
+        };
+
+        combo_pipe {
+            timeout-ms = <30>;
+            key-positions = <22 23>;
+            bindings = <&kp PIPE>;
         };
 
         combo_parenthesis_left {
             timeout-ms = <30>;
-            key-positions = <28 29>;
+            key-positions = <23 24>;
             bindings = <&kp LEFT_PARENTHESIS>;
         };
 
         combo_parenthesis_right {
             timeout-ms = <30>;
-            key-positions = <30 31>;
+            key-positions = <25 26>;
             bindings = <&kp RIGHT_PARENTHESIS>;
-        };
-
-        combo_pipe {
-            timeout-ms = <30>;
-            key-positions = <27 28>;
-            bindings = <&kp PIPE>;
         };
     };
 
@@ -172,38 +174,38 @@
 
         default_layer {
             bindings = <
-                &kp ESC         &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &td2               &hm LA(BSPC) BSPC
-                &kp TAB         &td1            &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O          &kp ENTER
-                &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
+                &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &td2
+                &td1            &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O
+                &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
             >;
         };
 
         lower_layer {
             bindings = <
-                &kp ESC         &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS         &hm F4 SEARCH   &kp F5          &hm PG_DN DOWN  &kp RIGHT           &hm F9 C_MUTE       &hm F10 C_VOL_DOWN  &hm F11 C_VOL_UP    &none
-                &none           &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp CARET       &hm RGUI AMPERSAND  &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK   &none
-                &none           &none           &none           &none               &none           &none           &hm PG_UP UP    &kp LEFT            &kp GRAVE           &none               &none               &none
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &kp DEL        &htl RAISE DEFAULT
+                &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS         &hm F4 SEARCH   &kp F5          &hm PG_DN DOWN  &kp RIGHT           &hm F9 VOL_MUTE     &hm F10 VOL_DOWN    &hm F11 VOL_UP
+                &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp CARET       &hm RGUI AMPERSAND  &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK
+                &none           &none           &none               &none           &none           &hm PG_UP UP    &kp LEFT            &kp GRAVE           &none               &hm BSLH FSLH
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm RALT DEL        &htl RAISE DEFAULT
 
             >;
         };
 
         raise_layer {
             bindings = <
-                &kp ESC         &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &hm F8 UP           &kp F9              &kp F10             &kp F11
-                &none           &none           &none           &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))      &none
-                &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &none           &none           &bt BT_CLR          &none               &none               &none               &none
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &kp DEL        &htl RAISE LOWER
+                &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &hm F8 UP           &kp F9              &kp F10
+                &none           &none           &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &none           &none           &bt BT_CLR          &none               &none               &none
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm RALT DEL        &htl RAISE LOWER
             >;
         };
 
         tri_layer {
             bindings = <
-                &kp ESC         &none           &none           &none               &none           &none           &none           &kp N7              &kp N8              &kp N9              &none               &none
-                &none           &none           &none           &none               &none           &none           &none           &kp N4              &kp N5              &kp N6              &none               &none
-                &none           &none           &none           &none               &none           &none           &kp N0          &kp N1              &kp N2              &kp N3              &none               &none
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp RIGHT_CONTROL   &kp DEL             &htl RAISE LOWER
+                &none           &none           &none               &none           &none           &none           &kp N7              &kp N8              &kp N9              &none
+                &none           &none           &none               &none           &none           &none           &kp N4              &kp N5              &kp N6              &none
+                &none           &none           &none               &none           &none           &kp N0          &kp N1              &kp N2              &kp N3              &none
+                                                             &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                              &kp ENTER           &hm RALT DEL        &htl RAISE LOWER
             >;
         };
     };

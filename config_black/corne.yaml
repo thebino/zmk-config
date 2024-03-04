@@ -130,32 +130,38 @@ draw_config:
     /* End Tabler Icons Cleanup */
   svg_extra_style: |
     svg.keymap {
-        --color--material--blue-gray--50: rgb(236, 239, 241);
-        --color--material--blue-gray--900: rgb(38, 50, 56);
-
-        /* keymap */
-        --color-keymap-text: #1a1b26;
+        /* canvas */
+        --color-canvas-text: #f6f8fa;
 
         /* key */
-        --color-key-bg: #F6F8FA;
+        --color-key-bg: #353535;
         --color-key-border: #c9cccf;
         --color-key-text-t: #f6f8fa;
-        --color-key-text-h: var(--color--material--blue-gray--900);
-        --color-key-text-s: var(--color--material--blue-gray--900);
+        --color-key-text-h: #8dc4fc;
+        --color-key-text-s: #8dfafc;
 
         /* combo */
-        --color-combo-bg: var(--color--material--blue-gray--50);
-        --color-combo-border: var(--color--material--blue-gray--50);
-        --color-combo-text-t: var(--color--material--blue-gray--900);
-        --color-combo-text-h: var(--color--material--blue-gray--900);
-        --color-combo-text-s: var(--color--material--blue-gray--900);
+        --color-combo-bg: #4f4f4f;
+        --color-combo-border: #6a93fc;
+        --color-combo-text-t: #6a93fc;
+        --color-combo-text-h: #1a261f;
+        --color-combo-text-s: #473027;
 
         font-family: Fantasque Sans Mono, JetBrains Mono, monospace;
         font-size: 14px;
-        fill: var(--color-keymap-text);
+        fill: var(--color-canvas-text);
     }
+
+    svg path {
+        fill: var(--color-key-text-t);
+    }
+    .icon-tabler > path {
+        fill: inherit;
+        stroke: var(--color-key-text-t);
+    }
+
     rect.key {
-      fill: var(--color-key-bg); 
+      fill: var(--color-key-bg);
       text.label {
         font-size: 14px;
       }
@@ -163,17 +169,25 @@ draw_config:
         font-size: 12px;
       }
     }
-    rect.held, rect.combo.held {
-        fill: #ea7d61;
+
+    /* Combo Key */
+    rect.combo {
+      fill: var(--color-combo-bg);
+      stroke: var(--color-combo-border);
     }
-    .keypos-16,
-    .keypos-19 {
-        --color-key-bg: #94DEC1;
+
+    .combo {
+      --color-key-bg: var(--color-combo-bg);
+      --color-key-border: var(--color-combo-border);
+      --color-key-text-t: var(--color-combo-text-t);
+      --color-key-text-h: var(--color-combo-text-h);
+      --color-key-text-s: var(--color-combo-text-s);
     }
-    .keypos-38,
-    .keypos-39 {
-        --color-key-bg: #8DC5DD;
+
+    .combo.tap {
+      fill: var(--color-combo-text-t);
     }
+
   shrink_wide_legends: 5
   glyph_tap_size: 26
   glyph_hold_size: 16
@@ -321,7 +335,7 @@ parse_config:
     RGUI: $$mdi:apple-keyboard-command$$
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
-    LA(BSPC): $$mdi:backspace$$
+    LA(BSPC): $$mdi:keyboard-backspace$$
     LG(LS(N4)): $$tabler:screenshot$$
 
     # Arrows
