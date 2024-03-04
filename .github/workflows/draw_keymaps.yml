@@ -45,15 +45,15 @@ jobs:
 
       - name: Debug
         run: |
-          tree images -L 2
           mv images/corne_white/corne.svg images/corne_white.svg
+          rm -rf images/corne_white/
           mv images/corne_black/corne.svg images/corne_black.svg
-          ls -al images
+          rm -rf images/corne_black/
 
-      # - uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: 'keymap-drawer render'
-      #     commit_options: ""
-      #     push_options: ""
-      #     skip_fetch: false
-      #     file_pattern: 'images/*.svg'
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'keymap-drawer render'
+          commit_options: ""
+          push_options: ""
+          skip_fetch: false
+          file_pattern: 'images/*.svg'
