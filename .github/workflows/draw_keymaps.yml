@@ -1,11 +1,9 @@
 name: 'Draw keymaps'
-on: 
-  workflow_dispatch:
+on:
+  workflow_dispatch: 
 
 jobs:
   white:
-
-    # https://github.com/caksoylar/keymap-drawer/blob/main/.github/workflows/draw-zmk.yml
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     with:
       keymap_patterns: "config_white/corne.keymap"         # path to the keymaps to parse
@@ -15,8 +13,6 @@ jobs:
       draw_args: "corne_white:'-k corne_rotated -l LAYOUT_split_3x6_3'"
 
   black:
-
-    # https://github.com/caksoylar/keymap-drawer/blob/main/.github/workflows/draw-zmk.yml
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     with:
       keymap_patterns: "config_black/corne.keymap"         # path to the keymaps to parse
@@ -24,15 +20,15 @@ jobs:
       output_folder: "images"                              # path to save produced SVG and keymap YAML files
       destination: "artifact"
 
-  commit:
-    needs: [white, black]
-    permissions:
-      contents: write
+  # commit:
+  #   needs: [white, black]
+  #   permissions:
+  #     contents: write
 
-    uses: stefanzweifel/git-auto-commit-action@v5
-    with:
-      commit_message: 'keymap-drawer render'
-      commit_options: ""
-      push_options: ""
-      skip_fetch: false
-      file_pattern: 'images/*.svg'
+  #   uses: stefanzweifel/git-auto-commit-action@v5
+  #   with:
+  #     commit_message: 'keymap-drawer render'
+  #     commit_options: ""
+  #     push_options: ""
+  #     skip_fetch: false
+  #     file_pattern: 'images/*.svg'
