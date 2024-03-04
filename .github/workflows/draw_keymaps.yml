@@ -46,6 +46,8 @@ jobs:
       - name: Debug
         run: |
           ls -al images
+          unzip images/*
+          ls -al images
 
       # - uses: stefanzweifel/git-auto-commit-action@v5
       #   with:
