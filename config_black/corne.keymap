@@ -28,7 +28,7 @@
     chosen {
       zmk,matrix_transform = &five_column_transform;
     };
-
+    
     behaviors {
         /*
          * htl
@@ -100,7 +100,7 @@
             bindings = <&hm N0 EQUAL>, <&kp MINUS>;
         };
     };
-    
+
     combos {
         compatible = "zmk,combos";
 
