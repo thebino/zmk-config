@@ -170,7 +170,7 @@
 
         default_layer {
             bindings = <
-                &kp ESC         &td0            &hm N2 W        &hm N3 E            &hm N4 R        &hm N5 T        &hm N6 Y        &hm N7 U            &hm N8 I            &hm N9 O            &hm P               &hm LA(BSPC) BSPC
+                &kp ESC         &td0            &hm N2 W        &hm N3 E            &hm N4 R        &hm N5 T        &hm N6 Y        &hm N7 U            &hm N8 I            &hm N9 O            &kp P               &hm LA(BSPC) BSPC
                 &kp TAB         &td1            &hm LCTRL S     &hm LSHIFT D        &hm LGUI F      &kp G           &kp H           &hm RGUI I          &hm RSHIFT J        &hm RCTRL K         &hm RALT L          &kp ENTER
                 &kp LSHFT       &kp Z           &kp X           &kp C               &kp V           &kp B           &kp N           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH       &kp MINUS
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                       &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
