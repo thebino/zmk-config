@@ -30,7 +30,7 @@ jobs:
 
 
   commit:
-    needs: [white, black]
+    needs: [draw_white, draw_black]
     runs-on: ubuntu-latest
     permissions:
       contents: write
