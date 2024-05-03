@@ -78,6 +78,15 @@
 <svg id="mdi:numeric-3">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-numeric-3" viewBox="0 0 24 24"><path d="M15,15V13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 15,10.5V9C15,7.89 14.1,7 13,7H9V9H13V11H11V13H13V15H9V17H13A2,2 0 0,0 15,15" /></svg>
 </svg>
+<svg id="mdi:play-pause">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-play-pause" viewBox="0 0 24 24"><path d="M3,5V19L11,12M13,19H16V5H13M18,5V19H21V5" /></svg>
+</svg>
+<svg id="mdi:skip-next">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-next" viewBox="0 0 24 24"><path d="M16,18H18V6H16M6,18L14.5,12L6,6V18Z" /></svg>
+</svg>
+<svg id="mdi:skip-previous">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-previous" viewBox="0 0 24 24"><path d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z" /></svg>
+</svg>
 <svg id="mdi:volume-high">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-volume-high" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>
 </svg>
@@ -866,15 +875,15 @@ rect.combo {
 </g>
 <g transform="translate(200, 120)" class="key keypos-12">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;C_PREV</tspan></text>
+<use href="#mdi:skip-previous" xlink:href="#mdi:skip-previous" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:skip-previous"/>
 </g>
 <g transform="translate(280, 130)" class="key keypos-13">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap">&amp;C_PP</text>
+<use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:play-pause"/>
 </g>
 <g transform="translate(360, 140)" class="key keypos-14">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;C_NEXT</tspan></text>
+<use href="#mdi:skip-next" xlink:href="#mdi:skip-next" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:skip-next"/>
 </g>
 <g transform="translate(680, 140)" class="key keypos-15">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
