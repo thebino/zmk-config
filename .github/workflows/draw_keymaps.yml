@@ -8,7 +8,7 @@ on:
       - '.github/workflows/draw_keymaps.yml'
 
 jobs:
-  white:
+  draw_white:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
       keymap_patterns: "config_white/corne.keymap"         # path to the keymaps to parse
@@ -18,7 +18,7 @@ jobs:
       draw_args: "corne_white:'-k corne_rotated -l LAYOUT_split_3x6_3'"
       artifact_name: "corne_white"
 
-  black:
+  draw_black:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
       keymap_patterns: "config_black/corne.keymap"         # path to the keymaps to parse
@@ -30,7 +30,7 @@ jobs:
 
 
   commit:
-    needs: [white, black]
+    needs: [draw_white, draw_black]
     runs-on: ubuntu-latest
     permissions:
       contents: write
