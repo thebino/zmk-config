@@ -7,7 +7,7 @@ on:
       - 'config_black/*'
 
 jobs:
-  build:
+  build_black:
     # https://github.com/zmkfirmware/zmk/blob/main/.github/workflows/build-user-config.yml
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     with:
