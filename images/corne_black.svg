@@ -866,15 +866,15 @@ rect.combo {
 </g>
 <g transform="translate(200, 120)" class="key keypos-12">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;K_PREV</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;C_PREV</tspan></text>
 </g>
 <g transform="translate(280, 130)" class="key keypos-13">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap">&amp;K_PP</text>
+<text x="0" y="0" class="key tap">&amp;C_PP</text>
 </g>
 <g transform="translate(360, 140)" class="key keypos-14">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;K_NEXT</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 71%">&amp;C_NEXT</tspan></text>
 </g>
 <g transform="translate(680, 140)" class="key keypos-15">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
