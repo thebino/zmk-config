@@ -193,7 +193,7 @@
                     = <&macro_tap &kp S &kp S> 
                     ;
             };
-        }
+        };
     };
 
     // cheat-sheet https://peccu.github.io/zmk-cheat-sheet/
