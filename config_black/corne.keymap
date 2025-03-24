@@ -167,13 +167,15 @@
             compatible = "zmk,behavior-macro";
             label = "macro_mail";
             #binding-cells = <0>;
+            wait-ms = <50>; // default: 15ms  Delay between each binging
+            tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
                 = <&macro_tap &kp B &kp E &kp N &kp J &kp A &kp M &kp I &kp N> 
                 , <&macro_tap &kp AT>
                 , <&macro_tap &kp S &kp T>
-                , <&macro_press &td1>
+                , <&macro_press &kp LALT>
                 , <&macro_tap &kp U>
-                , <&macro_release &td1>
+                , <&macro_release &kp LALT>
                 , <&macro_tap &kp U &kp R &kp M &kp E &kp R &kp PERIOD &kp P &kp R &kp O>
                 ;
         };
@@ -194,7 +196,7 @@
             wait-ms = <0>; // default: 15ms  Delay between each binging
             tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
-                = <&macro_tap &kp A &kp A> 
+                = <&macro_tap &kp B &kp B> 
                 ;
         };
     };
