@@ -56,7 +56,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -75,35 +75,35 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CAPS";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <400>; // Default: 200ms
             bindings = <&kp CAPS>, <&kp LSHFT>;
         };
 
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>; // Default: 200ms
             bindings = <&hm N1 Q>, <&hm N1 ESC>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>; // Default: 200ms
             bindings = <&hm LALT A>, <&kp TAB>;
         };
 
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>; // Default: 200ms
             bindings = <&hm N0 MINUS>, <&kp EQUAL>;
         };
 
         td3: tab_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <200>; // Default: 200ms
             bindings = <&kp S>, <&test>;            
         };
     };
@@ -181,6 +181,8 @@
             compatible = "zmk,behavior-macro";
             label = "macro_phone";
             #binding-cells = <0>;
+            wait-ms = <30>; // default: 15ms  Delay between each binging
+            tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
                 = <&macro_tap &kp N0 &kp N1 &kp N6 &kp N2 &kp N4 &kp N5 &kp N3 &kp N4 &kp N0 &kp N4 &kp N3> 
                 ;
