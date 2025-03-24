@@ -167,7 +167,7 @@
                 , <&macro_press &td1>
                 , <&macro_tap &kp U>
                 , <&macro_release &td1>
-                , <&macro_tap &kp R &kp M &kp E &kp R &kp PERIOD &kp P &kp R &kp O>
+                , <&macro_tap &kp U &kp R &kp M &kp E &kp R &kp PERIOD &kp P &kp R &kp O>
                 ;
         };
         phone: phone {
