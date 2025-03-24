@@ -33,7 +33,7 @@
         /*
          * htl
          *
-         * - tab once to switch layer
+         * - tab once to MOMENTARY switch layer
          * - hold to enable layer until release
          */
         htl: hold_tab_layer {
@@ -68,8 +68,8 @@
         /*
          * td_caps
          *
-         * - tab once for 2nd item
-         * - tab twice for 1st item
+         * - tab once for 1st item
+         * - tab twice for 2nd item
          */
         td_caps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
@@ -156,14 +156,26 @@
     };
 
     macros {
-        delete_word: delete_word {
+        mail: mail {
             compatible = "zmk,behavior-macro";
-            label = "ZM_delete_word";
+            label = "macro_mail";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp Z &kp M &kp K>
-                , <&macro_release &kp LSHFT>
+                = <&macro_tap &kp B &kp E &kp N &kp J &kp A &kp M &kp I &kp N> 
+                , <&macro_tap &kp AT>
+                , <&macro_tap &kp S &kp T>
+                , <&macro_press &td1>
+                , <&macro_tab &kp U>
+                , <&macro_release &td1>
+                , <macro_tap &kp R &kp M &kp E &kp R &kp PERIOD &kp P &kp R &kp O>
+                ;
+        };
+        phone: phone {
+            compatible = "zmk,behavior-macro";
+            label = "macro_phone";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp N0 &kp N1 &kp N6 &kp N2 &kp N4 &kp N5 &kp N3 &kp N4 &kp N0 &kp N4 &kp N3> 
                 ;
         };
     };
@@ -194,7 +206,7 @@
         raise_layer {
             bindings = <
                 &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &hm F8 UP           &kp F9              &kp F10
-                &none           &none           &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
+                &mail           &phone          &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_CLR      &none           &none               &none               &none               &none
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm RALT DEL        &htl RAISE LOWER
             >;
