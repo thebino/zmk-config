@@ -189,8 +189,10 @@
             compatible = "zmk,behavior-macro";
             label = "macro_phone";
             #binding-cells = <0>;
+            wait-ms = <0>; // default: 15ms  Delay between each binging
+            tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
-                = <&macro_tap &kp S &kp S> 
+                = <&macro_tap &kp A &kp A> 
                 ;
         };
     };
