@@ -99,11 +99,12 @@
             tapping-term-ms = <200>;
             bindings = <&hm N0 MINUS>, <&kp EQUAL>;
         };
+
         td3: tab_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp s>, <&kp test>;            
+            bindings = <&kp S>, <&kp test>;            
         }
     };
 
