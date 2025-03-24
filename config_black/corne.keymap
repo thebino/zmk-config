@@ -187,12 +187,11 @@
         };
         test: test {
             compatible = "zmk,behavior-macro";
-                label = "macro_phone";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp S &kp S> 
-                    ;
-            };
+            label = "macro_phone";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp S &kp S> 
+                ;
         };
     };
 
