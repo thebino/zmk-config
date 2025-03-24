@@ -165,7 +165,7 @@
                 , <&macro_tap &kp AT>
                 , <&macro_tap &kp S &kp T>
                 , <&macro_press &td1>
-                , <&macro_tab &kp U>
+                , <&macro_tap &kp U>
                 , <&macro_release &td1>
                 , <&macro_tap &kp R &kp M &kp E &kp R &kp PERIOD &kp P &kp R &kp O>
                 ;
