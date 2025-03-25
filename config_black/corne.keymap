@@ -167,7 +167,7 @@
             compatible = "zmk,behavior-macro";
             label = "macro_mail";
             #binding-cells = <0>;
-            wait-ms = <50>; // default: 15ms  Delay between each binging
+            wait-ms = <0>; // default: 15ms  Delay between each binging
             tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
                 = <&macro_tap &kp B &kp E &kp N &kp J &kp A &kp M &kp I &kp N> 
@@ -183,7 +183,7 @@
             compatible = "zmk,behavior-macro";
             label = "macro_phone";
             #binding-cells = <0>;
-            wait-ms = <30>; // default: 15ms  Delay between each binging
+            wait-ms = <5>; // default: 15ms  Delay between each binging
             tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
                 = <&macro_tap &kp N0 &kp N1 &kp N6 &kp N2 &kp N4 &kp N5 &kp N3 &kp N4 &kp N0 &kp N4 &kp N3> 
@@ -191,12 +191,12 @@
         };
         test: test {
             compatible = "zmk,behavior-macro";
-            label = "macro_phone";
+            label = "macro_test";
             #binding-cells = <0>;
             wait-ms = <0>; // default: 15ms  Delay between each binging
             tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
-                = <&macro_tap &kp B &kp B> 
+                = <&macro_tap &kp L &kp L>
                 ;
         };
     };
