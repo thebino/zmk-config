@@ -215,7 +215,7 @@ parse_config:
     '&bt BT_SEL 4': {h: $$mdi:bluetooth$$ , t: $$mdi:numeric-4$$}
     '&bt BT_PRV':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-previous$$}
     '&bt BT_NXT':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-next$$}
-    '&email':   {t: $$mdi:email-fast$$}
+    '&mail':   {t: $$mdi:email-fast$$}
     '&phone':   {t: $$mdi:phone-classic$$}
   sticky_label: $$mdi:gesture-tap-hold$$
   toggle_label: toggle
