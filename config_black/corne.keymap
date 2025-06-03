@@ -28,6 +28,22 @@
     chosen {
       zmk,matrix_transform = &five_column_transform;
     };
+
+    /*
+     * Caps Word
+     *
+     * https://zmk.dev/docs/keymaps/behaviors/caps-word
+     */
+    &caps_word {
+        continue-list = <
+          UNDERSCORE MINUS
+          LCTRL LALT LGUI LSHFT
+          RCTRL RALT RGUI RSHFT
+          BACKSPACE
+        >;
+
+        /delete-property/ ignore-modifiers;
+    };
     
     behaviors {
         /*
@@ -219,7 +235,7 @@
         raise_layer {
             bindings = <
                 &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &mt F8 UP           &kp F9              &kp F10
-                &mail           &phone          &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
+                &mail           &phone          &caps_word          &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_CLR      &none           &none               &none               &none               &none
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &htl RAISE LOWER
             >;
