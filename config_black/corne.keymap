@@ -63,7 +63,7 @@
             hold-trigger-on-release;
         };
 
-        /
+        /*
          * htl
          *
          * - tab once to MOMENTARY switch layer
