@@ -24,25 +24,26 @@
 #define SEARCH C_AC_SEARCH
 
 
+/*
+ * Caps Word
+ *
+ * https://zmk.dev/docs/keymaps/behaviors/caps-word
+ */
+&caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      LCTRL LALT LGUI LSHFT
+      RCTRL RALT RGUI RSHFT
+      BACKSPACE
+    >;
+
+    /delete-property/ ignore-modifiers;
+};
+
+
 / {
     chosen {
       zmk,matrix_transform = &five_column_transform;
-    };
-
-    /*
-     * Caps Word
-     *
-     * https://zmk.dev/docs/keymaps/behaviors/caps-word
-     */
-    &caps_word {
-        continue-list = <
-          UNDERSCORE MINUS
-          LCTRL LALT LGUI LSHFT
-          RCTRL RALT RGUI RSHFT
-          BACKSPACE
-        >;
-
-        /delete-property/ ignore-modifiers;
     };
     
     behaviors {
