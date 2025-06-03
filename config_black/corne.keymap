@@ -31,6 +31,39 @@
     
     behaviors {
         /*
+         * home-row-left
+         *
+         * - tab:  2nd key
+         * - hold: 1st key
+         */
+        hml: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            require-prior-idle-ms = <REQ_IDLE_MS>;
+            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 34 25 26 35 27 28 29 37 36>;
+            hold-trigger-on-release;
+        };
+        hmr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <TAPPING_TERM_MS>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <REQ_IDLE_MS>;
+            hold-trigger-key-positions = <0 1 2 3 4 14 13 12 11 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
+        /
          * htl
          *
          * - tab once to MOMENTARY switch layer
@@ -191,7 +224,7 @@
         default_layer {
             bindings = <
                 &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &td2
-                &td1            &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O
+                &td1            &hml LCTRL R    &hml LSHIFT S       &hml LGUI T     &kp D           &kp H           &hmr RGUI N         &hmr RSHIFT E       &hmr RCTRL I        &hmr RALT O
                 &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH
                                                                 &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
             >;
