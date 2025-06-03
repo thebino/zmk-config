@@ -24,12 +24,64 @@
 #define SEARCH C_AC_SEARCH
 
 
+/*
+ * Caps Word
+ *
+ * https://zmk.dev/docs/keymaps/behaviors/caps-word
+ */
+&caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      LCTRL LALT LGUI LSHFT
+      RCTRL RALT RGUI RSHFT
+      BACKSPACE
+    >;
+
+    /delete-property/ ignore-modifiers;
+};
+
+
 / {
     chosen {
       zmk,matrix_transform = &five_column_transform;
     };
     
     behaviors {
+        /*
+         * homerow mod
+         *
+         * https://zmk.dev/docs/keymaps/behaviors/hold-tap#custom-hold-tap-examples
+         *
+         * - tab:  2nd key
+         * - hold: 1st key
+         */
+        hml: homerow_mods_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_LEFT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <5 6 7 8 9 19 18 17 16 15 34 25 26 35 27 28 29 37 36>;
+            hold-trigger-on-release;
+        };
+        hmr: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_RIGHT_HAND";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 14 13 12 11 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
+
         /*
          * htl
          *
@@ -46,58 +98,32 @@
             bindings = <&mo>, <&to>;
         };
 
-        /*
-         * hm
-         * 
-         * - tab once for key press 2nd item
-         * - hold for key press 1st item
-         */
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        // different key press on each press (LSHFT -> CAPS Lock)
-        // https://zmk.dev/docs/behaviors/tap-dance
 
         /*
-         * td_caps
+         * tap-dance
          *
-         * - tab once for 1st item
-         * - tab twice for 2nd item
+         * different key press on each press
+         * https://zmk.dev/docs/behaviors/tap-dance
          */
-        td_caps: tap_dance_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_CAPS";
-            #binding-cells = <0>;
-            tapping-term-ms = <400>; // Default: 200ms
-            bindings = <&kp CAPS>, <&kp LSHFT>;
-        };
-
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&hm N1 Q>, <&hm N1 ESC>;
+            bindings = <&mt N1 Q>, <&mt N1 ESC>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&hm LALT A>, <&kp TAB>;
+            bindings = <&mt LALT A>, <&kp TAB>;
         };
 
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&hm N0 MINUS>, <&kp EQUAL>;
+            bindings = <&mt N0 MINUS>, <&kp EQUAL>;
         };
     };
 
@@ -190,29 +216,29 @@
 
         default_layer {
             bindings = <
-                &td0            &hm N2 W        &hm N3 F            &hm N4 P        &hm N5 G        &hm N6 J        &hm N7 L            &hm N8 U            &hm N9 Y            &td2
-                &td1            &hm LCTRL R     &hm LSHIFT S        &hm LGUI T      &kp D           &kp H           &hm RGUI N          &hm RSHIFT E        &hm RCTRL I         &hm RALT O
-                &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &hm BSLH FSLH
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm LA(BSPC) BSPC   &htl RAISE DEFAULT
+                &td0            &mt N2 W        &mt N3 F            &mt N4 P        &mt N5 G        &mt N6 J        &mt N7 L            &mt N8 U            &mt N9 Y            &td2
+                &td1            &hml LCTRL R    &hml LSHIFT S       &hml LGUI T     &kp D           &kp H           &hmr RGUI N         &hmr RSHIFT E       &hmr RCTRL I        &hmr RALT O
+                &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &mt BSLH FSLH
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt LA(BSPC) BSPC   &htl RAISE DEFAULT
             >;
         };
 
         lower_layer {
             bindings = <
-                &hm F1 DARK     &hm F2 BRIGHT   &hm F3 APPS         &hm F4 SEARCH   &kp F5          &hm PG_DN DOWN  &kp RIGHT           &hm F9 VOL_MUTE     &hm F10 VOL_DOWN    &hm F11 VOL_UP
-                &hm LALT EXCL   &hm LCTRL AT    &hm LSHIFT HASH     &hm LGUI DOLLAR &kp PERCENT     &kp AMPERSAND   &hm RGUI CARET      &hm RSHIFT SEMI     &hm RCTRL APOS      &hm RALT ASTERISK
-                &none           &none           &none               &none           &none           &hm PG_UP UP    &kp LEFT            &kp GRAVE           &none               &hm BSLH FSLH
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm RALT DEL        &htl RAISE DEFAULT
+                &mt F1 DARK     &mt F2 BRIGHT   &mt F3 APPS         &mt F4 SEARCH   &kp F5          &mt PG_DN DOWN  &kp RIGHT           &mt F9 VOL_MUTE     &mt F10 VOL_DOWN    &mt F11 VOL_UP
+                &mt LALT EXCL   &hml LCTRL AT   &hml LSHIFT HASH    &hml LGUI DOLLAR &kp PERCENT    &kp AMPERSAND   &hmr RGUI CARET     &hmr RSHIFT SEMI    &hmr RCTRL APOS     &hmr RALT ASTERISK
+                &none           &none           &none               &none           &none           &mt PG_UP UP    &kp LEFT            &kp GRAVE           &none               &mt BSLH FSLH
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &htl RAISE DEFAULT
 
             >;
         };
 
         raise_layer {
             bindings = <
-                &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &hm F8 UP           &kp F9              &kp F10
-                &mail           &phone          &none               &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
+                &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &mt F8 UP           &kp F9              &kp F10
+                &mail           &phone          &caps_word          &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_CLR      &none           &none               &none               &none               &none
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &hm RALT DEL        &htl RAISE LOWER
+                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &htl RAISE LOWER
             >;
         };
 
@@ -221,7 +247,7 @@
                 &none           &none           &none               &none           &none           &kp MINUS       &kp N7              &kp N8              &kp N9              &none
                 &none           &none           &kp C_PREV          &kp C_PP        &kp C_NEXT      &kp PLUS        &kp N4              &kp N5              &kp N6              &none
                 &none           &none           &none               &none           &none           &kp N0          &kp N1              &kp N2              &kp N3              &none
-                                                             &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                              &kp ENTER           &hm RALT DEL        &htl RAISE LOWER
+                                                             &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                              &kp ENTER           &mt RALT DEL        &htl RAISE LOWER
             >;
         };
     };
