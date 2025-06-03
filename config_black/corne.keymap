@@ -81,6 +81,7 @@
             bindings = <&mo>, <&to>;
         };
 
+
         /*
          * tap-dance
          *
@@ -98,14 +99,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&mt LALT A>, <&mt TAB>;
+            bindings = <&mt LALT A>, <&kp TAB>;
         };
 
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&mt N0 MINUS>, <&mt EQUAL>;
+            bindings = <&mt N0 MINUS>, <&kp EQUAL>;
         };
     };
 
