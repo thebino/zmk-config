@@ -48,6 +48,16 @@
     
     behaviors {
         /*
+         * Mod-Tap - change default interrupt behaviour
+         *
+         * https://zmk.dev/docs/keymaps/behaviors/hold-tap#interrupt-flavors
+         *
+         */
+        mt: mod_tap {
+            flavor = "tap-preferred";
+        };
+
+        /*
          * homerow mod
          *
          * https://zmk.dev/docs/keymaps/behaviors/hold-tap#custom-hold-tap-examples
