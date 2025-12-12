@@ -4,13 +4,20 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: infely
       url-base: https://github.com/infely
+    - name: mctechnology17
+      url-base: https://github. com/mctechnology17
+    - name: Ziembski
+      url-base: https://github.com/Ziembski
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
-      import: app/west.yml
-    - name: nice-view-battery
-      remote: infely
       revision: main
+      import: app/west.yml
+    # - name: nice-view-battery
+      # remote: infely
+    # - name: zmk-nice-oled
+      # remote: mctechnology17
+    - name: nice-view-press-start
+      remote: Ziembski
   self:
     path: config
