@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'config*/*.keymap'
+      - 'config_*/*'
+      - 'keymap-drawer/*'
       - 'includes/*.dtsi'
       - '.github/workflows/draw_keymaps.yml'
 
@@ -12,8 +13,8 @@ jobs:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
       keymap_patterns: "config_white/corne.keymap"         # path to the keymaps to parse
-      config_path: "config_white/corne.yaml"               # config file, ignored if not exists
-      output_folder: "images"                              # path to save produced SVG and keymap YAML files
+      config_path: "keymap-drawer/corne_white_config.yaml" # config file, ignored if not exists
+      output_folder: "keymap-drawer"                       # path to save produced SVG and keymap YAML files
       destination: "artifact"
       draw_args: "corne_white:'-k corne_rotated -l LAYOUT_split_3x6_3'"
       artifact_name: "corne_white"
@@ -22,8 +23,8 @@ jobs:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
       keymap_patterns: "config_black/corne.keymap"         # path to the keymaps to parse
-      config_path: "config_black/corne.yaml"               # config file, ignored if not exists
-      output_folder: "images"                              # path to save produced SVG and keymap YAML files
+      config_path: "keymap-drawer/corne_black_config.yaml" # config file, ignored if not exists
+      output_folder: "keymap-drawer"                              # path to save produced SVG and keymap YAML files
       destination: "artifact"
       draw_args: "corne_black:'-k corne_rotated -l LAYOUT_split_3x5_3'"
       artifact_name: "corne_black"
@@ -47,10 +48,10 @@ jobs:
 
       - name: Rename artifacts
         run: |
-          mv images/corne_white/corne.svg images/corne_white.svg
-          rm -rf images/corne_white/
-          mv images/corne_black/corne.svg images/corne_black.svg
-          rm -rf images/corne_black/
+          mv keymap-drawer/corne_white/corne.svg keymap-drawer/corne_white.svg
+          rm -rf keymap-drawer/corne_white/
+          mv keymap-drawer/corne_black/corne.svg keymap-drawer/corne_black.svg
+          rm -rf keymap-drawer/corne_black/
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -58,4 +59,4 @@ jobs:
           commit_options: ""
           push_options: ""
           skip_fetch: false
-          file_pattern: 'images/*.svg'
+          file_pattern: 'keymap-drawer/*.svg'
