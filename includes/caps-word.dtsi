@@ -1,5 +1,5 @@
-// Custom behaviors 
-// https://zmk.dev/docs/keymaps/behaviors
+// Caps Word 
+// https://zmk.dev/docs/keymaps/behaviors/caps-word
 / {
     behaviors {
         &caps_word {
