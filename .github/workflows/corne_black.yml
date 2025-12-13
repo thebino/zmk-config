@@ -9,7 +9,7 @@ on:
 jobs:
   build_black:
     # https://github.com/zmkfirmware/zmk/blob/main/.github/workflows/build-user-config.yml
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
     with:
       build_matrix_path: corne_black_build.yaml            # default: "build.yaml"
       config_path: config_black                            # default: "config"
