@@ -44,7 +44,7 @@ jobs:
         id: download-artifact
         uses: actions/download-artifact@v4
         with:
-          path: images
+          path: keymap-drawer
 
       - name: Rename artifacts
         run: |
