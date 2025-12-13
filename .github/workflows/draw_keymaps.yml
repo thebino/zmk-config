@@ -12,7 +12,7 @@ jobs:
   draw_white:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
-      keymap_patterns: "config_white/corne.keymap"         # path to the keymaps to parse
+      keymap_patterns: "config/corne_white.keymap"         # path to the keymaps to parse
       config_path: "keymap-drawer/corne_white_config.yaml" # config file, ignored if not exists
       output_folder: "keymap-drawer"                       # path to save produced SVG and keymap YAML files
       destination: "artifact"
@@ -22,7 +22,7 @@ jobs:
   draw_black:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
-      keymap_patterns: "config_black/corne.keymap"         # path to the keymaps to parse
+      keymap_patterns: "config/corne_black.keymap"         # path to the keymaps to parse
       config_path: "keymap-drawer/corne_black_config.yaml" # config file, ignored if not exists
       output_folder: "keymap-drawer"                              # path to save produced SVG and keymap YAML files
       destination: "artifact"
