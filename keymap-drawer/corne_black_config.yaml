@@ -204,7 +204,7 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-    "&caps_word": "$$mdi:apple-keyboard-caps$$"
+    '&caps_word': {t: $$mdi:apple-keyboard-caps$$}
     '&td0': {t: Q, h: 1, s: '$$mdi:keyboard-esc$$'}
     '&td1': {t: A, h: '$$mdi:apple-keyboard-option$$', s: '$$mdi:keyboard-tab$$'}
     '&td2': {t: '=', h: 0, s: '-'}
