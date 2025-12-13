@@ -217,6 +217,7 @@ parse_config:
     '&bt BT_NXT':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-next$$}
     '&mail':   {t: $$mdi:email-fast$$}
     '&phone':   {t: $$mdi:phone-classic$$}
+    '&caps_word':   {t: $$mdi:apple-keyboard-caps$$}
   sticky_label: $$mdi:gesture-tap-hold$$
   toggle_label: toggle
   trans_legend:
