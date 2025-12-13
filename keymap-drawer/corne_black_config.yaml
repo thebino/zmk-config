@@ -217,7 +217,6 @@ parse_config:
     '&bt BT_NXT':   {h: $$mdi:bluetooth$$ , t: $$mdi:skip-next$$}
     '&mail':   {t: $$mdi:email-fast$$}
     '&phone':   {t: $$mdi:phone-classic$$}
-    '&caps_word':   {t: $$mdi:apple-keyboard-caps$$}
   sticky_label: $$mdi:gesture-tap-hold$$
   toggle_label: toggle
   trans_legend:
@@ -421,5 +420,7 @@ parse_config:
     combo_parenthesis_left:
         type: 'vertical_combo'
     combo_parenthesis_right:
+        type: 'vertical_combo'
+    combo_caps_word:
         type: 'vertical_combo'
 
