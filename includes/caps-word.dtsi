@@ -1,0 +1,17 @@
+// Custom behaviors 
+// https://zmk.dev/docs/keymaps/behaviors
+/ {
+    behaviors {
+        &caps_word {
+            continue-list = <
+              UNDERSCORE MINUS
+              LCTRL LALT LGUI LSHFT
+              RCTRL RALT RGUI RSHFT
+              BACKSPACE
+            >;
+
+            /delete-property/ ignore-modifiers;
+        };
+    };
+};
+
