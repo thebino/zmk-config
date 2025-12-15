@@ -12,4 +12,4 @@ jobs:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
     with:
       build_matrix_path: corne_white_build.yaml            # default: "build.yaml"
-      archive_name: corne                                  # default: "firmware"
+      archive_name: corne_white                            # default: "firmware"
