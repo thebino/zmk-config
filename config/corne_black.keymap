@@ -170,8 +170,8 @@
     };
 };
 
-#include "../includes/caps-word.dtsi"
-#include "../includes/hold-tap.dtsi"
-#include "../includes/homerow.dtsi"
-#include "../includes/mod-tap.dtsi"
-#include "../includes/tap-dance.dtsi"
+/* #include "../includes/caps-word.dtsi" */
+/* #include "../includes/hold-tap.dtsi" */
+/* #include "../includes/homerow.dtsi" */
+/* #include "../includes/mod-tap.dtsi" */
+/* #include "../includes/tap-dance.dtsi" */
