@@ -9,16 +9,6 @@ on:
       - '.github/workflows/draw_keymaps.yml'
 
 jobs:
-  draw_white:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
-    with:
-      keymap_patterns: "config/corne_white.keymap"         # path to the keymaps to parse
-      config_path: "keymap-drawer/corne_white_config.yaml" # config file, ignored if not exists
-      output_folder: "keymap-drawer"                       # path to save produced SVG and keymap YAML files
-      destination: "artifact"
-      draw_args: "corne_white:'-k corne_rotated -l LAYOUT_split_3x6_3'"
-      artifact_name: "corne_white"
-
   draw_black:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@v0.14.1
     with:
@@ -29,9 +19,8 @@ jobs:
       draw_args: "corne_black:'-k corne_rotated -l LAYOUT_split_3x5_3'"
       artifact_name: "corne_black"
 
-
   commit:
-    needs: [draw_white, draw_black]
+    needs: [draw_black]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -48,8 +37,6 @@ jobs:
 
       - name: Rename artifacts
         run: |
-          mv keymap-drawer/corne_white/corne_white.svg keymap-drawer/corne_white.svg
-          rm -rf keymap-drawer/corne_white/
           mv keymap-drawer/corne_black/corne_black.svg keymap-drawer/corne_black.svg
           rm -rf keymap-drawer/corne_black/
 
