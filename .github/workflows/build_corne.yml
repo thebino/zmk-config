@@ -1,15 +1,15 @@
-name: 'Corne Black'
+name: 'Build Corne'
 on:
   workflow_dispatch:
   push:
     paths:
       - 'includes/*'
-      - 'config/config_black/*'
+      - 'config/corne.*'
+      - '.github/workflows/build_corne.yml'
 
 jobs:
   build_black:
     # https://github.com/zmkfirmware/zmk/blob/main/.github/workflows/build-user-config.yml
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3.0
     with:
-      build_matrix_path: corne_black_build.yaml            # default: "build.yaml"
-      archive_name: corne_black                            # default: "firmware"
+      build_matrix_path: build_corne.yaml            # default: "build.yaml"
