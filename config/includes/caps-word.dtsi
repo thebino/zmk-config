@@ -5,18 +5,14 @@
 
 // Caps Word 
 // https://zmk.dev/docs/keymaps/behaviors/caps-word
-/ {
-    behaviors {
-        &caps_word {
-            continue-list = <
-              UNDERSCORE MINUS
-              LCTRL LALT LGUI LSHFT
-              RCTRL RALT RGUI RSHFT
-              BACKSPACE
-            >;
+&caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      LCTRL LALT LGUI LSHFT
+      RCTRL RALT RGUI RSHFT
+      BACKSPACE
+    >;
 
-            /delete-property/ ignore-modifiers;
-        };
-    };
+    /delete-property/ ignore-modifiers;
 };
 
