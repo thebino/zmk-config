@@ -24,23 +24,6 @@
 #define SEARCH C_AC_SEARCH
 
 
-/*
- * Caps Word
- *
- * https://zmk.dev/docs/keymaps/behaviors/caps-word
- */
-&caps_word {
-    continue-list = <
-      UNDERSCORE MINUS
-      LCTRL LALT LGUI LSHFT
-      RCTRL RALT RGUI RSHFT
-      BACKSPACE
-    >;
-
-    /delete-property/ ignore-modifiers;
-};
-
-
 /* 
  * ╭─────────────────────────┬────────────────────────╮
  * │  0   1   2   3   4      │      5   6   7   8   9 │
@@ -54,100 +37,15 @@
     chosen {
       zmk,matrix_transform = &five_column_transform;
     };
-    
-    behaviors {
-        /*
-         * Mod-Tap - change default interrupt behaviour
-         *
-         * https://zmk.dev/docs/keymaps/behaviors/hold-tap#interrupt-flavors
-         *
-         */
-        mt: mod_tap {
-            flavor = "tap-preferred";
-        };
-
-        /*
-         * homerow mod
-         *
-         * https://zmk.dev/docs/keymaps/behaviors/hold-tap#custom-hold-tap-examples
-         *
-         * - tab:  2nd key
-         * - hold: 1st key
-         */
-        hml: homerow_mods_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_HAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            flavor = "balanced";
-            require-prior-idle-ms = <50>;
-            hold-trigger-key-positions = <5 6 7 8 9  15 16 17 18 19  25 26 27 28 29>;
-            hold-trigger-on-release;
-        };
-        hmr: homerow_mods_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <50>;
-            hold-trigger-key-positions = <0 1 2 3 4  10 11 12 13 14  20 21 22 23 24>;
-            flavor = "balanced";
-            hold-trigger-on-release;
-        };
-
-        /*
-         * htl
-         *
-         * - tab once to MOMENTARY switch layer
-         * - hold to enable layer until release
-         */
-        htl: hold_tab_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAB_LAYER";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick_tap_ms = <0>;
-            flavor = "balanced";
-            bindings = <&mo>, <&to>;
-        };
-
-
-        /*
-         * tap-dance
-         *
-         * different key press on each press
-         * https://zmk.dev/docs/behaviors/tap-dance
-         */
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&mt N1 Q>, <&mt N1 ESC>;
-        };
-
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&mt LALT A>, <&kp TAB>;
-        };
-
-        td2: tap_dance_2 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>; // Default: 200ms
-            bindings = <&mt N0 MINUS>, <&kp EQUAL>;
-        };
-    };
 
     combos {
         compatible = "zmk,combos";
+
+        combo_caps_word {
+            timeout-ms = <30>;
+            key-positions = <13 16>;
+            bindings = <&caps_word>;
+        };
 
         combo_brace_left {
             timeout-ms = <30>;
@@ -272,3 +170,8 @@
     };
 };
 
+#include "includes/caps-word.dtsi"
+#include "includes/hold-tap.dtsi"
+#include "includes/homerow.dtsi"
+#include "includes/mod-tap.dtsi"
+#include "includes/tap-dance.dtsi"

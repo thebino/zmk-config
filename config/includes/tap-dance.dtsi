@@ -1,0 +1,32 @@
+// Tap-Dance Behavior 
+// https://zmk.dev/docs/keymaps/behaviors/tap-dance
+/ {
+    behaviors {
+        // 1st tap: Q (long-press #1)
+        // 2nd tap: ESC
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Default: 200ms
+            bindings = <&mt N1 Q>, <&mt N1 ESC>;
+        };
+
+        // 1st tap: A (long-press ALT)
+        // 2nd tap: TAB
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Default: 200ms
+            bindings = <&mt LALT A>, <&kp TAB>;
+        };
+
+        // 1st tap: - (long-press #0)
+        // 2nd tap: =
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; // Default: 200ms
+            bindings = <&mt N0 MINUS>, <&kp EQUAL>;
+        };
+    };
+};

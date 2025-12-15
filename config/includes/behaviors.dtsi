@@ -1,0 +1,7 @@
+// Custom behaviors 
+// https://zmk.dev/docs/keymaps/behaviors
+/ {
+    behaviors {
+     
+    };
+};

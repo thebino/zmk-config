@@ -1,0 +1,9 @@
+// Mod-tap 
+// https://zmk.dev/docs/keymaps/behaviors/hold-tap#interrupt-flavors
+/ {
+    behaviors {
+        mt: mod_tap {
+            flavor = "tap-preferred";
+        }; 
+    };
+};

@@ -1,0 +1,18 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+// Caps Word 
+// https://zmk.dev/docs/keymaps/behaviors/caps-word
+&caps_word {
+    continue-list = <
+      UNDERSCORE MINUS
+      LCTRL LALT LGUI LSHFT
+      RCTRL RALT RGUI RSHFT
+      BACKSPACE
+    >;
+
+    /delete-property/ ignore-modifiers;
+};
+
