@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'includes/*'
+      - 'config/includes/*'
       - 'config/corne.*'
       - '.github/workflows/build_corne.yml'
 
