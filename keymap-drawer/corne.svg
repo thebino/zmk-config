@@ -150,7 +150,7 @@ svg.keymap {
 
 /* default key styling */
 rect.key {
-    fill: #f6f8fa;
+    # fill: #f6f8fa;
     stroke: #c9cccf;
     stroke-width: 1;
 }
@@ -165,10 +165,10 @@ rect.combo, rect.combo-separate {
     fill: #cdf;
 }
 
-# /* color accent for held keys */
-# rect.held, rect.combo.held {
-#     fill: #fdd;
-# }
+/* color accent for held keys */
+rect.held, rect.combo.held {
+    fill: #fdd;
+}
 
 /* color accent for ghost (optional) keys */
 rect.ghost, rect.combo.ghost {
