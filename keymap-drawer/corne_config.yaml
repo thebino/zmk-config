@@ -1,4 +1,19 @@
 draw_config:
+  key_w: 80.0
+  key_h: 80.0
+  combo_w: 34.0
+  combo_h: 34.0
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: inherit;
+    }
+    /* default key styling */
+    rect.key {
+        fill: #f6f8fa;
+        stroke: #c9cccf;
+        stroke-width: 1;
+    }
   dark_mode: true
   glyph_urls:
     tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
