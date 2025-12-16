@@ -47,7 +47,6 @@
             bindings = <&kp ESC>;
         };
 
-
         combo_caps_word {
             timeout-ms = <30>;
             key-positions = <13 16>;
@@ -143,7 +142,7 @@
                 &td0            &mt N2 W        &mt N3 F            &mt N4 P        &mt N5 G        &mt N6 J        &mt N7 L            &mt N8 U            &mt N9 Y            &td2
                 &td1            &hml LCTRL R    &hml LSHIFT S       &hml LGUI T     &kp D           &kp H           &hmr RGUI N         &hmr RSHIFT E       &hmr RCTRL I        &hmr RALT O
                 &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &mt BSLH FSLH
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt LA(BSPC) BSPC   &htl RAISE DEFAULT
+                                                                &mo LOWER  &kp LCMD        &kp SPACE                           &kp ENTER           &mt LA(BSPC) BSPC   &htl RAISE DEFAULT
             >;
         };
 

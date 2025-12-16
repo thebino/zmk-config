@@ -2,8 +2,8 @@
 // https://zmk.dev/docs/keymaps/behaviors/hold-tap
 / {
     behaviors {
-        // tap : MOMENTARY switch layer
-        // hold: enable layer until release
+        // tab:  2nd key | MOMENTARY switch layer
+        // hold: 1st key | enable layer until release
         htl: hold_tab_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAB_LAYER";
