@@ -41,6 +41,13 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <11 12 13>;
+            bindings = <&kp ESC>;
+        };
+
+
         combo_caps_word {
             timeout-ms = <30>;
             key-positions = <13 16>;
