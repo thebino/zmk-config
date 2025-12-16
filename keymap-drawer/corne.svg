@@ -165,10 +165,10 @@ rect.combo, rect.combo-separate {
     fill: #cdf;
 }
 
-/* color accent for held keys */
-rect.held, rect.combo.held {
-    fill: #fdd;
-}
+# /* color accent for held keys */
+# rect.held, rect.combo.held {
+#     fill: #fdd;
+# }
 
 /* color accent for ghost (optional) keys */
 rect.ghost, rect.combo.ghost {
@@ -274,6 +274,24 @@ rect.key {
   text.hold {
     font-size: 12px;
   }
+}
+
+/* Combo Key */
+rect.combo {
+  fill: var(--color-combo-bg);
+  stroke: var(--color-combo-border);
+}
+
+.combo {
+  --color-key-bg: var(--color-combo-bg);
+  --color-key-border: var(--color-combo-border);
+  --color-key-text-t: var(--color-combo-text-t);
+  --color-key-text-h: var(--color-combo-text-h);
+  --color-key-text-s: var(--color-combo-text-s);
+}
+
+.combo.tap {
+  fill: var(--color-combo-text-t);
 }
 </style>
 <g transform="translate(0, 0)" class="layer-default">
@@ -445,10 +463,8 @@ rect.key {
 </g>
 <g transform="translate(800, 293)" class="key keypos-35">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<a href="#default">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 71%">default</tspan></text>
-</a><a href="#raise">
-<text x="0" y="37" class="key hold layer-activator">raise</text>
+<a href="#raise">
+<text x="0" y="0" class="key tap layer-activator">raise</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M520,171 h-234 a6.0,6.0 0 0 1 -6.0,-6.0 v-8" class="combo"/>
@@ -623,10 +639,8 @@ rect.key {
 </g>
 <g transform="translate(240, 293)" class="key held keypos-30">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key held"/>
-<a href="#default">
-<text x="0" y="0" class="key held tap layer-activator"><tspan style="font-size: 71%">default</tspan></text>
-</a><a href="#lower">
-<text x="0" y="37" class="key held hold layer-activator">lower</text>
+<a href="#lower">
+<text x="0" y="0" class="key held tap layer-activator">lower</text>
 </a></g>
 <g transform="translate(328, 304) rotate(15.0)" class="key keypos-31">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
@@ -647,10 +661,8 @@ rect.key {
 </g>
 <g transform="translate(800, 293)" class="key keypos-35">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
-<a href="#default">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 71%">default</tspan></text>
-</a><a href="#raise">
-<text x="0" y="37" class="key hold layer-activator">raise</text>
+<a href="#raise">
+<text x="0" y="0" class="key tap layer-activator">raise</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M520,171 h-234 a6.0,6.0 0 0 1 -6.0,-6.0 v-8" class="combo"/>
@@ -810,10 +822,8 @@ rect.key {
 </g>
 <g transform="translate(240, 293)" class="key held alternate keypos-30">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key held alternate"/>
-<a href="#default">
-<text x="0" y="0" class="key held alternate tap layer-activator"><tspan style="font-size: 71%">default</tspan></text>
-</a><a href="#lower">
-<text x="0" y="37" class="key held alternate hold layer-activator">lower</text>
+<a href="#lower">
+<text x="0" y="0" class="key held alternate tap layer-activator">lower</text>
 </a></g>
 <g transform="translate(328, 304) rotate(15.0)" class="key keypos-31">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
@@ -834,10 +844,8 @@ rect.key {
 </g>
 <g transform="translate(800, 293)" class="key held keypos-35">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key held"/>
-<a href="#lower">
-<text x="0" y="0" class="key held tap layer-activator">lower</text>
-</a><a href="#raise">
-<text x="0" y="37" class="key held hold layer-activator">raise</text>
+<a href="#raise">
+<text x="0" y="0" class="key held tap layer-activator">raise</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M520,171 h-234 a6.0,6.0 0 0 1 -6.0,-6.0 v-8" class="combo"/>
@@ -995,10 +1003,8 @@ rect.key {
 </g>
 <g transform="translate(240, 293)" class="key held keypos-30">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key held"/>
-<a href="#default">
-<text x="0" y="0" class="key held tap layer-activator"><tspan style="font-size: 71%">default</tspan></text>
-</a><a href="#lower">
-<text x="0" y="37" class="key held hold layer-activator">lower</text>
+<a href="#lower">
+<text x="0" y="0" class="key held tap layer-activator">lower</text>
 </a></g>
 <g transform="translate(328, 304) rotate(15.0)" class="key keypos-31">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key"/>
@@ -1019,10 +1025,8 @@ rect.key {
 </g>
 <g transform="translate(800, 293)" class="key held keypos-35">
 <rect rx="4" ry="4" x="-39" y="-39" width="78" height="78" class="key held"/>
-<a href="#lower">
-<text x="0" y="0" class="key held tap layer-activator">lower</text>
-</a><a href="#raise">
-<text x="0" y="37" class="key held hold layer-activator">raise</text>
+<a href="#raise">
+<text x="0" y="0" class="key held tap layer-activator">raise</text>
 </a></g>
 <g class="combo combopos-0">
 <path d="M520,171 h-234 a6.0,6.0 0 0 1 -6.0,-6.0 v-8" class="combo"/>
