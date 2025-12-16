@@ -170,23 +170,6 @@ draw_config:
       }
     }
 
-    /* Combo Key */
-    rect.combo {
-      fill: var(--color-combo-bg);
-      stroke: var(--color-combo-border);
-    }
-
-    .combo {
-      --color-key-bg: var(--color-combo-bg);
-      --color-key-border: var(--color-combo-border);
-      --color-key-text-t: var(--color-combo-text-t);
-      --color-key-text-h: var(--color-combo-text-h);
-      --color-key-text-s: var(--color-combo-text-s);
-    }
-
-    .combo.tap {
-      fill: var(--color-combo-text-t);
-    }
 
   shrink_wide_legends: 5
   glyph_tap_size: 26
