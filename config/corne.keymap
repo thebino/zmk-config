@@ -41,6 +41,12 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_esc {
+            timeout-ms = <30>;
+            key-positions = <11 12 13>;
+            bindings = <&kp ESC>;
+        };
+
         combo_caps_word {
             timeout-ms = <30>;
             key-positions = <13 16>;
@@ -136,7 +142,7 @@
                 &td0            &mt N2 W        &mt N3 F            &mt N4 P        &mt N5 G        &mt N6 J        &mt N7 L            &mt N8 U            &mt N9 Y            &td2
                 &td1            &hml LCTRL R    &hml LSHIFT S       &hml LGUI T     &kp D           &kp H           &hmr RGUI N         &hmr RSHIFT E       &hmr RCTRL I        &hmr RALT O
                 &kp Z           &kp X           &kp C               &kp V           &kp B           &kp K           &kp M               &kp COMMA           &kp DOT             &mt BSLH FSLH
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt LA(BSPC) BSPC   &htl RAISE DEFAULT
+                                                                &mo LOWER  &kp LCMD        &kp SPACE                           &kp ENTER           &mt LA(BSPC) BSPC   &mo RAISE
             >;
         };
 
@@ -145,7 +151,7 @@
                 &mt F1 DARK     &mt F2 BRIGHT   &mt F3 APPS         &mt F4 SEARCH   &kp F5          &mt PG_DN DOWN  &kp RIGHT           &mt F9 VOL_MUTE     &mt F10 VOL_DOWN    &mt F11 VOL_UP
                 &mt LALT EXCL   &hml LCTRL AT   &hml LSHIFT HASH    &hml LGUI DOLLAR &kp PERCENT    &kp AMPERSAND   &hmr RGUI CARET     &hmr RSHIFT SEMI    &hmr RCTRL APOS     &hmr RALT ASTERISK
                 &none           &none           &none               &none           &none           &mt PG_UP UP    &kp LEFT            &kp GRAVE           &none               &mt BSLH FSLH
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &htl RAISE DEFAULT
+                                                                &mo LOWER  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &mo RAISE
 
             >;
         };
@@ -155,7 +161,7 @@
                 &kp F1          &kp F2          &kp F3              &kp F4          &kp F5          &kp F6          &kp F7              &mt F8 UP           &kp F9              &kp F10
                 &mail           &phone          &caps_word          &none           &none           &none           &kp LEFT            &kp DOWN            &kp RIGHT           &kp LG(LS(N4))
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2        &bt BT_SEL 3    &bt BT_CLR      &none           &none               &none               &none               &none
-                                                                &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &htl RAISE LOWER
+                                                                &mo LOWER  &kp LCMD        &kp SPACE                           &kp ENTER           &mt RALT DEL        &mo RAISE
             >;
         };
 
@@ -164,14 +170,13 @@
                 &none           &none           &none               &none           &none           &kp MINUS       &kp N7              &kp N8              &kp N9              &none
                 &none           &none           &kp C_PREV          &kp C_PP        &kp C_NEXT      &kp PLUS        &kp N4              &kp N5              &kp N6              &none
                 &none           &none           &none               &none           &none           &kp N0          &kp N1              &kp N2              &kp N3              &none
-                                                             &htl LOWER DEFAULT  &kp LCMD        &kp SPACE                              &kp ENTER           &mt RALT DEL        &htl RAISE LOWER
+                                                             &mo LOWER  &kp LCMD        &kp SPACE                              &kp ENTER           &mt RALT DEL        &mo RAISE
             >;
         };
     };
 };
 
 #include "includes/caps-word.dtsi"
-#include "includes/hold-tap.dtsi"
 #include "includes/homerow.dtsi"
 #include "includes/mod-tap.dtsi"
 #include "includes/tap-dance.dtsi"
