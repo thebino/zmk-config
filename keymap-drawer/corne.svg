@@ -121,7 +121,7 @@
   stroke-linejoin="round"
   class="icon icon-tabler icons-tabler-outline icon-tabler-screenshot"
 >
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
   <path d="M7 19a2 2 0 0 1 -2 -2" />
   <path d="M5 13v-2" />
   <path d="M5 7a2 2 0 0 1 2 -2" />
@@ -492,11 +492,15 @@ rect.combo {
 <rect rx="4" ry="4" x="223" y="188" width="34" height="34" class="combo"/>
 <text x="240" y="205" class="combo tap">|</text>
 </g>
-<g class="combo vertical_combo combopos-6">
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="783" y="188" width="34" height="34" class="combo"/>
+<text x="800" y="205" class="combo tap"><tspan style="font-size: 71%">&amp;bullet</tspan></text>
+</g>
+<g class="combo vertical_combo combopos-7">
 <rect rx="4" ry="4" x="303" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="320" y="215" class="combo vertical_combo tap">(</text>
 </g>
-<g class="combo vertical_combo combopos-7">
+<g class="combo vertical_combo combopos-8">
 <rect rx="4" ry="4" x="703" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="720" y="215" class="combo vertical_combo tap">)</text>
 </g>
@@ -690,11 +694,15 @@ rect.combo {
 <rect rx="4" ry="4" x="223" y="188" width="34" height="34" class="combo"/>
 <text x="240" y="205" class="combo tap">|</text>
 </g>
-<g class="combo vertical_combo combopos-6">
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="783" y="188" width="34" height="34" class="combo"/>
+<text x="800" y="205" class="combo tap"><tspan style="font-size: 71%">&amp;bullet</tspan></text>
+</g>
+<g class="combo vertical_combo combopos-7">
 <rect rx="4" ry="4" x="303" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="320" y="215" class="combo vertical_combo tap">(</text>
 </g>
-<g class="combo vertical_combo combopos-7">
+<g class="combo vertical_combo combopos-8">
 <rect rx="4" ry="4" x="703" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="720" y="215" class="combo vertical_combo tap">)</text>
 </g>
@@ -873,11 +881,15 @@ rect.combo {
 <rect rx="4" ry="4" x="223" y="188" width="34" height="34" class="combo"/>
 <text x="240" y="205" class="combo tap">|</text>
 </g>
-<g class="combo vertical_combo combopos-6">
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="783" y="188" width="34" height="34" class="combo"/>
+<text x="800" y="205" class="combo tap"><tspan style="font-size: 71%">&amp;bullet</tspan></text>
+</g>
+<g class="combo vertical_combo combopos-7">
 <rect rx="4" ry="4" x="303" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="320" y="215" class="combo vertical_combo tap">(</text>
 </g>
-<g class="combo vertical_combo combopos-7">
+<g class="combo vertical_combo combopos-8">
 <rect rx="4" ry="4" x="703" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="720" y="215" class="combo vertical_combo tap">)</text>
 </g>
@@ -1054,11 +1066,15 @@ rect.combo {
 <rect rx="4" ry="4" x="223" y="188" width="34" height="34" class="combo"/>
 <text x="240" y="205" class="combo tap">|</text>
 </g>
-<g class="combo vertical_combo combopos-6">
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="783" y="188" width="34" height="34" class="combo"/>
+<text x="800" y="205" class="combo tap"><tspan style="font-size: 71%">&amp;bullet</tspan></text>
+</g>
+<g class="combo vertical_combo combopos-7">
 <rect rx="4" ry="4" x="303" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="320" y="215" class="combo vertical_combo tap">(</text>
 </g>
-<g class="combo vertical_combo combopos-7">
+<g class="combo vertical_combo combopos-8">
 <rect rx="4" ry="4" x="703" y="198" width="34" height="34" class="combo vertical_combo"/>
 <text x="720" y="215" class="combo vertical_combo tap">)</text>
 </g>
