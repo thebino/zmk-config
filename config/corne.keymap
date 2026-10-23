@@ -77,6 +77,12 @@
             bindings = <&kp PIPE>;
         };
 
+        combo_ascii_dot {
+            timeout-ms = <30>;
+            key-positions = <26 27>;
+            bindings = <&bullet>;
+        };
+
         combo_parenthesis_left {
             timeout-ms = <30>;
             key-positions = <23 24>;
@@ -123,6 +129,18 @@
             tap-ms = <30>; // default: 30ms  How long each binding will be held
             bindings
                 = <&macro_tap &kp N0 &kp N1 &kp N6 &kp N2 &kp N4 &kp N5 &kp N3 &kp N4 &kp N0 &kp N4 &kp N3> 
+                ;
+        };
+        bullet: bullet {
+            compatible = "zmk,behavior-macro";
+            label = "bullet";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_tap &kp N8>
+                , <&macro_release &kp RALT>
                 ;
         };
     };
